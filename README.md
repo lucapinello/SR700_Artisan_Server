@@ -44,7 +44,7 @@ Or like this without a Phidget:
 
 ## 4. In Artisan go under help and select Load Settings…
 
-Use this file if you have a Phidget: https://raw.githubusercontent.com/lucapinello/SR700-Artisan-PDServer-Phidget/master/SR700-Artisan-PDServer-Phidget/settings/artisan-settings.aset
+Download and use this file if you have a Phidget: https://raw.githubusercontent.com/lucapinello/SR700-Artisan-PDServer-Phidget/master/SR700-Artisan-PDServer-Phidget/settings/artisan-settings.aset
 
 Or this if you don't have a Phidget: https://raw.githubusercontent.com/lucapinello/SR700-Artisan-PDServer-Phidget/master/SR700-Artisan-PDServer-Phidget/settings/artisan-settings-no-phidget.aset
 
