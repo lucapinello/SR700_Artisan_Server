@@ -16,7 +16,7 @@ Open the Terminal app and type this command:
 `pip install SR700-Artisan-PDServer-Phidget`
 
 
-## 3. If you have a Phidget Start the server with:
+## 3. If you have a Phidget start the server in the Terminal with:
 
 `Start_SR700_Artisan_Server.py`  
 
@@ -44,9 +44,9 @@ Or like this without a Phidget:
 
 ## 4. In Artisan go under help and select Load Settings…
 
-Use this file if you have a Phidget: https://raw.githubusercontent.com/lucapinello/SR700-Artisan-PDServer-Phidget/master/settings/artisan-settings.aset
+Use this file if you have a Phidget: https://raw.githubusercontent.com/lucapinello/SR700-Artisan-PDServer-Phidget/master/SR700-Artisan-PDServer-Phidget/settings/artisan-settings.aset
 
-Or this if you don't have a Phidget: https://raw.githubusercontent.com/lucapinello/SR700-Artisan-PDServer-Phidget/master/settings/artisan-settings-no-phidget.aset
+Or this if you don't have a Phidget: https://raw.githubusercontent.com/lucapinello/SR700-Artisan-PDServer-Phidget/master/SR700-Artisan-PDServer-Phidget/settings/artisan-settings-no-phidget.aset
 
 The roasting profiles are created through alarms, a generic profile is already loaded.
 
