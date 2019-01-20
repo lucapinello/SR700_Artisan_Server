@@ -1,4 +1,2 @@
 include LICENSE
-recursive-include alarms *.*
-recursive-include settings  *.*
-
+recursive-include SR700-Artisan-PDServer-Phidget *.*
