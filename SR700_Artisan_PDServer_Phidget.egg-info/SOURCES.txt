@@ -1,5 +1,4 @@
 README.md
-SAPDServer.py
 setup.py
 SR700_Artisan_PDServer_Phidget.egg-info/PKG-INFO
 SR700_Artisan_PDServer_Phidget.egg-info/SOURCES.txt
@@ -16,3 +15,4 @@ cmds/Roaster_Set_Fan.py
 cmds/Roaster_Set_Temp.py
 cmds/Roaster_Set_Time.py
 cmds/Roaster_Stop.py
+cmds/Start_SR700_Artisan_Server.py

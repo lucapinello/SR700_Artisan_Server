@@ -22,6 +22,6 @@ setup(
     author='Luca Pinello',
     license='GPLv3',
     packages=find_packages(),
-    install_requires=['freshroastsr700_phidget',],
+    install_requires=['freshroastsr700_phidget','Pyro4','datetime'],
     scripts=scripts,
 )
