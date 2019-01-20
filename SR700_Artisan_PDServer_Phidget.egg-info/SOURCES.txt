@@ -3,6 +3,7 @@ MANIFEST.in
 README.md
 setup.cfg
 setup.py
+SR700-Artisan-PDServer-Phidget/.DS_Store
 SR700-Artisan-PDServer-Phidget/Get_Artisan_Temp.py
 SR700-Artisan-PDServer-Phidget/Get_Artisan_and_Phidget_Temp.py
 SR700-Artisan-PDServer-Phidget/Get_Roaster_State.py
@@ -19,6 +20,7 @@ SR700-Artisan-PDServer-Phidget/alarms
 SR700-Artisan-PDServer-Phidget/settings
 SR700-Artisan-PDServer-Phidget/alarms/Luca_alarm_150_400_log10_750_sec.alrm
 SR700-Artisan-PDServer-Phidget/alarms/Luca_profile_based_on_Ryan.alrm
+SR700-Artisan-PDServer-Phidget/settings/artisan-settings-no-phidget.aset
 SR700-Artisan-PDServer-Phidget/settings/artisan-settings.aset
 SR700_Artisan_PDServer_Phidget.egg-info/PKG-INFO
 SR700_Artisan_PDServer_Phidget.egg-info/SOURCES.txt
