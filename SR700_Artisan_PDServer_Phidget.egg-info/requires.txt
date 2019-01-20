@@ -1,1 +1,3 @@
-freshroastsr700_phidget
+freshroastsr700_phidget>=0.2
+Pyro4
+datetime

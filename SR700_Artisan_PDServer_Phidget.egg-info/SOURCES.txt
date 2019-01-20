@@ -1,3 +1,5 @@
+LICENSE
+MANIFEST.in
 README.md
 setup.py
 SR700_Artisan_PDServer_Phidget.egg-info/PKG-INFO
@@ -5,6 +7,8 @@ SR700_Artisan_PDServer_Phidget.egg-info/SOURCES.txt
 SR700_Artisan_PDServer_Phidget.egg-info/dependency_links.txt
 SR700_Artisan_PDServer_Phidget.egg-info/requires.txt
 SR700_Artisan_PDServer_Phidget.egg-info/top_level.txt
+alarms/Luca_alarm_150_400_log10_750_sec.alrm
+alarms/Luca_profile_based_on_Ryan.alrm
 cmds/Get_Artisan_Temp.py
 cmds/Get_Artisan_and_Phidget_Temp.py
 cmds/Get_Roaster_State.py
@@ -16,3 +20,4 @@ cmds/Roaster_Set_Temp.py
 cmds/Roaster_Set_Time.py
 cmds/Roaster_Stop.py
 cmds/Start_SR700_Artisan_Server.py
+settings/artisan-settings.aset

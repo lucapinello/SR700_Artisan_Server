@@ -1,0 +1,4 @@
+include LICENSE
+recursive-include alarms *.*
+recursive-include settings  *.*
+
