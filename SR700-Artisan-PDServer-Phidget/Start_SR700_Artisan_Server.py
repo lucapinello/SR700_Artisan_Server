@@ -104,14 +104,17 @@ class Roaster(object):
 
 if __name__ == '__main__':
 
-    try:
+    use_phidget_temp=True
+
+
+
+    if len(sys.argv) > 1:
         if sys.argv[1]=='no_phidget':
             use_phidget_temp=False
         else:
-            use_phidget_temp=True
-    except:
-        print('Please use these commands:\n Start_SR700_Artisan_Server.py\nor\n Start_SR700_Artisan_Server.py no_phidget')
-        sys.exit(1)
+            print('Please use these commands:\n Start_SR700_Artisan_Server.py\nor\n Start_SR700_Artisan_Server.py no_phidget')
+            sys.exit(1)
+
 
 
     # Create a roaster object.

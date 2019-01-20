@@ -16,7 +16,7 @@ scripts=glob.glob('SR700-Artisan-PDServer-Phidget/*.py')
 
 setup(
     name='SR700-Artisan-PDServer-Phidget',
-    version=0.1,
+    version=0.2,
     packages = ["SR700-Artisan-PDServer-Phidget"],
     package_dir={'SR700-Artisan-PDServer-Phidget': '.'},
     include_package_data = True,
