@@ -7,8 +7,6 @@ Extension of the SR700-Artisan-PDServer (https://github.com/infinigrove/SR700-Ar
 
 Install the Phidget driver for your machine: https://www.phidgets.com/docs/Operating_System_Support
 
-Download and install the Python module from here:https://www.phidgets.com/docs/Language_-_Python
-
 ## 2. Install this Server with: 
 
 Open the Terminal app and type this command:
