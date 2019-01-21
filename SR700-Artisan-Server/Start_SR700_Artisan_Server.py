@@ -139,8 +139,9 @@ if __name__ == '__main__':
         time.sleep(1)
 
 
-    
-    nameserverUri, nameserverDaemon, broadcastServer = Pyro4.naming.startNS()
+    hostname=socket.gethostname()
+    Pyro4.naming.startNSloop(hostname)
+    #nameserverUri, nameserverDaemon, broadcastServer = Pyro4.naming.startNS()
 
     daemon = Pyro4.Daemon()                # make a Pyro daemon
     ns = Pyro4.locateNS()
