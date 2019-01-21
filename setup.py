@@ -12,13 +12,14 @@ import glob
 
 here = os.path.abspath(os.path.dirname(__file__))
 
-scripts=glob.glob('SR700-Artisan-Server/*.py')
-
+script_names=list(map(os.path.basename,glob.glob('SR700_Artisan_Server/*.py')))
+entry_points_list=['{0}={1}.{0}:main'.format(name.split('.')[0],'SR700_Artisan_Server') for name in script_names]
+#print(entry_points_list)
 setup(
-    name='SR700-Artisan-Server',
-    version=0.4,
-    packages = ["SR700-Artisan-Server"],
-    package_dir={'SR700-Artisan-Server': '.'},
+    name='SR700_Artisan_Server',
+    version=0.5,
+    packages = ["SR700_Artisan_Server"],
+    package_dir={'SR700_Artisan_Server': '.'},
     include_package_data = True,
     description='Extension of the SR700-Artisan-PDServer (https://github.com/infinigrove/SR700-Artisan-PDServer) to use with the Phidget',
     url='https://github.com/lucapinello/SR700-Artisan-Server',
@@ -26,5 +27,5 @@ setup(
     license='GPLv3',
     install_requires=['freshroastsr700_phidget>=0.3','Pyro4','datetime'],
     python_requires='>3.5.2',
-    scripts=scripts,
+    entry_points = {"console_scripts": entry_points_list},
 )
