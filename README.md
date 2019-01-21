@@ -13,11 +13,11 @@ Download and install the Python module from here:https://www.phidgets.com/docs/L
 
 Open the Terminal app and type this command:
 
-`pip install SR700-Artisan-PDServer-Phidget`
+`pip install SR700-Artisan-Server`
 
 If you have Python3 you may need this command instead:
 
-`pip3 install SR700-Artisan-PDServer-Phidget`
+`pip3 install SR700-Artisan-Server`
 
 ## 3. If you have a Phidget start the server in the Terminal with:
 
