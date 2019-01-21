@@ -21,7 +21,7 @@ setup(
     package_dir={'SR700-Artisan-Server': '.'},
     include_package_data = True,
     description='Extension of the SR700-Artisan-PDServer (https://github.com/infinigrove/SR700-Artisan-PDServer) to use with the Phidget',
-    url='https://github.com/lucapinello/freshroastsr700_phidget',
+    url='https://github.com/lucapinello/SR700-Artisan-Server',
     author='Luca Pinello',
     license='GPLv3',
     install_requires=['freshroastsr700_phidget>=0.3','Pyro4','datetime'],
