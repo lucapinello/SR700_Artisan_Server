@@ -16,7 +16,7 @@ scripts=glob.glob('SR700-Artisan-Server/*.py')
 
 setup(
     name='SR700-Artisan-Server',
-    version=0.3,
+    version=0.4,
     packages = ["SR700-Artisan-Server"],
     package_dir={'SR700-Artisan-Server': '.'},
     include_package_data = True,
