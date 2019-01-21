@@ -1,4 +1,4 @@
-# SR700-Artisan-PDServer-Phidget
+# SR700-Artisan-Server
 
 Extension of the SR700-Artisan-PDServer (https://github.com/infinigrove/SR700-Artisan-PDServer) to use with the Phidget Temperature Sensor (if available) and to simplify the setup and the configuration with Artisan (https://artisan-scope.org/).
 
