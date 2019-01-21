@@ -105,12 +105,17 @@ class Roaster(object):
 if __name__ == '__main__':
 
     use_phidget_temp=True
-
+    kp=0.4
+    ki=0.0075
+    kd=0.9
 
 
     if len(sys.argv) > 1:
         if sys.argv[1]=='no_phidget':
             use_phidget_temp=False
+            kp=0.06
+            ki=0.0075
+            kd=0.01
         else:
             print('Please use these commands:\n Start_SR700_Artisan_Server.py\nor\n Start_SR700_Artisan_Server.py no_phidget')
             sys.exit(1)
@@ -118,7 +123,7 @@ if __name__ == '__main__':
 
 
     # Create a roaster object.
-    r = Roaster(use_phidget_temp=use_phidget_temp)
+    r = Roaster(use_phidget_temp=use_phidget_temp,kp=kp,ki=ki,kd=kd)
 
     # Set logging
     #logging.basicConfig(filename="RoastControl_debug_log.log",level=logging.DEBUG)

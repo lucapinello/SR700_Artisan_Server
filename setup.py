@@ -24,6 +24,6 @@ setup(
     url='https://github.com/lucapinello/freshroastsr700_phidget',
     author='Luca Pinello',
     license='GPLv3',
-    install_requires=['freshroastsr700_phidget>=0.2','Pyro4','datetime'],
+    install_requires=['freshroastsr700_phidget>=0.3','Pyro4','datetime'],
     scripts=scripts,
 )
