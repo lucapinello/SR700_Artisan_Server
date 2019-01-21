@@ -12,10 +12,8 @@ import sys
 from freshroastsr700_phidget import SR700Phidget
 import logging
 import Pyro4
-import socket
-import select
-import Pyro4.core
-import Pyro4.naming
+import os
+
 
 
 
@@ -138,10 +136,8 @@ if __name__ == '__main__':
         print("Please connect your roaster...")
         time.sleep(1)
 
-
-    hostname=socket.gethostname()
-    Pyro4.naming.startNSloop(hostname)
-    #nameserverUri, nameserverDaemon, broadcastServer = Pyro4.naming.startNS()
+    os.system("python3 -m Pyro4.naming -n 0.0.0.0 &")
+    time.sleep(1)
 
     daemon = Pyro4.Daemon()                # make a Pyro daemon
     ns = Pyro4.locateNS()
