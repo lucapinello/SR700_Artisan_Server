@@ -1,3 +1,4 @@
+#!/usr/bin/env python
 # -*- coding: utf-8 -*-
 # Copyright (c) 2015-2016 Jeff Stevens
 # SR700-Artisan-PDServer, released under GPLv3
@@ -11,10 +12,6 @@ import sys
 from freshroastsr700_phidget import SR700Phidget
 import logging
 import Pyro4
-
-
-
-
 
 
 @Pyro4.expose

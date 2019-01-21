@@ -1,4 +1,4 @@
-#!/usr/bin/env python3
+#!/usr/bin/env python
 # -*- coding: utf-8 -*-
 # SR700-Artisan-PDServer, released under GPLv3
 # Roaster Set Temperature
