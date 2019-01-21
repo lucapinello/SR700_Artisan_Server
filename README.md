@@ -1,4 +1,4 @@
-# SR700-Artisan-Server
+# SR700_Artisan_Server
 
 Extension of the SR700-Artisan-PDServer (https://github.com/infinigrove/SR700-Artisan-PDServer) to use with the Phidget Temperature Sensor (if available) and to simplify the setup and the configuration with Artisan (https://artisan-scope.org/).
 
@@ -11,15 +11,15 @@ Install the Phidget driver for your machine: https://www.phidgets.com/docs/Opera
 
 Open the Terminal app and type this command:
 
-`pip install SR700-Artisan-Server`
+`pip install SR700_Artisan_Server`
 
 If you have Python3 you may need this command instead:
 
-`pip3 install SR700-Artisan-Server`
+`pip3 install SR700_Artisan_Server`
 
 ## 3. If you have a Phidget start the server in the Terminal with:
 
-`Start_SR700_Artisan_Server.py`  
+`Start_SR700_Artisan_Server`  
 
 Otherwise with:
 
