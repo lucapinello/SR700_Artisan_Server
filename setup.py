@@ -16,7 +16,7 @@ scripts=glob.glob('SR700-Artisan-Server/*.py')
 
 setup(
     name='SR700-Artisan-Server',
-    version=0.2,
+    version=0.3,
     packages = ["SR700-Artisan-Server"],
     package_dir={'SR700-Artisan-Server': '.'},
     include_package_data = True,
@@ -25,5 +25,6 @@ setup(
     author='Luca Pinello',
     license='GPLv3',
     install_requires=['freshroastsr700_phidget>=0.3','Pyro4','datetime'],
+    python_requires='>3.5.2',
     scripts=scripts,
 )
