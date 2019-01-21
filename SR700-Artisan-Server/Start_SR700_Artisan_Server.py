@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 # Copyright (c) 2015-2016 Jeff Stevens
 # SR700-Artisan-PDServer, released under GPLv3
