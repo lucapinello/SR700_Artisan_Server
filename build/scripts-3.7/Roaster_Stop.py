@@ -1,4 +1,4 @@
-#!/Users/luca/anaconda3/bin/python
+#!python
 # -*- coding: utf-8 -*-
 # SR700-Artisan-PDServer, released under GPLv3
 # Roaster Run Recipe
