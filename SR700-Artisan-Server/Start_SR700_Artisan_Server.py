@@ -12,6 +12,11 @@ import sys
 from freshroastsr700_phidget import SR700Phidget
 import logging
 import Pyro4
+import socket
+import select
+import Pyro4.core
+import Pyro4.naming
+
 
 
 @Pyro4.expose
@@ -132,6 +137,10 @@ if __name__ == '__main__':
     while(r.roaster.connected is False):
         print("Please connect your roaster...")
         time.sleep(1)
+
+
+    
+    nameserverUri, nameserverDaemon, broadcastServer = Pyro4.naming.startNS()
 
     daemon = Pyro4.Daemon()                # make a Pyro daemon
     ns = Pyro4.locateNS()
