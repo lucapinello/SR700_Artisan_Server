@@ -14,12 +14,12 @@ here = os.path.abspath(os.path.dirname(__file__))
 
 script_names=list(map(os.path.basename,glob.glob('SR700_Artisan_Server/*.py')))
 entry_points_list=['{0}={1}.{0}:main'.format(name.split('.')[0],'SR700_Artisan_Server') for name in script_names]
-#print(entry_points_list)
+print(entry_points_list)
 setup(
     name='SR700_Artisan_Server',
     version=0.1,
     packages = ["SR700_Artisan_Server"],
-    package_dir={'SR700_Artisan_Server': '.'},
+    package_dir={'SR700_Artisan_Server': 'SR700_Artisan_Server'},
     include_package_data = True,
     description='Extension of the SR700-Artisan-PDServer (https://github.com/infinigrove/SR700-Artisan-PDServer) to use with the Phidget',
     url='https://github.com/lucapinello/SR700-Artisan-Server',
