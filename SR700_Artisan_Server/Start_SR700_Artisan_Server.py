@@ -135,7 +135,7 @@ if __name__ == '__main__':
     while(r.roaster.connected is False):
         print("Please connect your roaster...")
         time.sleep(1)
-    
+
     os.system("python3 -m Pyro4.naming -n 0.0.0.0 &")
     time.sleep(1)
 
