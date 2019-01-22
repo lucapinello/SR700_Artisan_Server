@@ -131,8 +131,8 @@ def main():
         print("Please connect your roaster...")
         time.sleep(1)
 
-    os.system("python3 -m Pyro4.naming -n 0.0.0.0 &")
-    time.sleep(1)
+    os.system("python3 -m Pyro4.naming &")
+    time.sleep(2)
 
     daemon = Pyro4.Daemon()                # make a Pyro daemon
     ns = Pyro4.locateNS()
