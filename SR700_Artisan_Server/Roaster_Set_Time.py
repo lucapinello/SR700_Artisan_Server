@@ -5,8 +5,12 @@
 import Pyro4
 import sys
 
-new_roaster_time = sys.argv[1]
+def main():
+    new_roaster_time = sys.argv[1]
 
-roast_control = Pyro4.Proxy("PYRONAME:roaster.sr700")
-if int(new_roaster_time) > 0 and int(new_roaster_time) <=1500:
-    roast_control.set_time(new_roaster_time)
+    roast_control = Pyro4.Proxy("PYRONAME:roaster.sr700")
+    if int(new_roaster_time) > 0 and int(new_roaster_time) <=1500:
+        roast_control.set_time(new_roaster_time)
+
+if __name__ == '__main__':
+    main()

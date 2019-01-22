@@ -99,8 +99,7 @@ class Roaster(object):
         ret_state = cur_temp + cur_state
         return self.roaster.current_temp,self.roaster.current_temp_phidget
 
-if __name__ == '__main__':
-    
+def main():
     use_phidget_temp=True
     kp=0.4
     ki=0.0075
@@ -142,3 +141,7 @@ if __name__ == '__main__':
     print("Ready. Object uri =", uri)      # print the uri so we can use it in the client later
     ns.register("roaster.sr700", uri)
     daemon.requestLoop()                   # start the event loop of the server to wait for calls
+
+
+if __name__ == '__main__':
+    main()

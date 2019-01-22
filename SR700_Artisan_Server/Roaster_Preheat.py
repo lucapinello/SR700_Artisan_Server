@@ -5,9 +5,13 @@
 
 import Pyro4
 
-roast_control = Pyro4.Proxy("PYRONAME:roaster.sr700")
+def main():
+    roast_control = Pyro4.Proxy("PYRONAME:roaster.sr700")
 
-roast_control.set_time(1500)
-roast_control.set_temperature(150)
-roast_control.set_fan_speed(9)
-roast_control.run_roast()
+    roast_control.set_time(1500)
+    roast_control.set_temperature(150)
+    roast_control.set_fan_speed(9)
+    roast_control.run_roast()
+
+if __name__ == '__main__':
+    main()

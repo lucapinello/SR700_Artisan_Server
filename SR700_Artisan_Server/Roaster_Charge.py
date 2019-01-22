@@ -5,5 +5,9 @@
 
 import Pyro4
 
-roast_control = Pyro4.Proxy("PYRONAME:roaster.sr700")
-roast_control.run_roast()
+def main():
+    roast_control = Pyro4.Proxy("PYRONAME:roaster.sr700")
+    roast_control.run_roast()
+
+if __name__ == '__main__':
+    main()
