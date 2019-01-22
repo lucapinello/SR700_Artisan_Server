@@ -2,7 +2,7 @@
 
 Server to use the Freshroast SR700 with Artisan (https://artisan-scope.org/). This server simplifies dramatically the setup and the configuration of Artisan (settings are included).
 
-It also allows to fully automate the roasting with user profiles that can be easily create with another tool (see the end of the document). 
+It also allows to fully automate the roasting with users' profiles that can be easily created with another tool (see the end of the document). 
 
 If available the Phidget Temperature Sensor can be used to improve the roasting and to measure the true beans temperature. 
 
