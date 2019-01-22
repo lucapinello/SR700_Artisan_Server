@@ -1,14 +1,27 @@
 # Freshroast SR700 Artisan Server
 
-Extension of the SR700-Artisan-PDServer (https://github.com/infinigrove/SR700-Artisan-PDServer) to use with the Phidget Temperature Sensor (if available) and to simplify the setup and the configuration with Artisan (https://artisan-scope.org/).
+Server to use the Freshroast SR700 with Artisan (https://artisan-scope.org/). This server simplifies dramatically the setup and the configuration of Artisan (settings are included).
+
+It also allows to fully automate the roasting with user profiles that can be easily create with another tool (see the end of the document). 
+
+If available the Phidget Temperature Sensor can be used to improve the roasting and to measure the true beans temperature. 
+
+This work was inspired by the SR700-Artisan-PDServer (https://github.com/infinigrove/SR700-Artisan-PDServer) and freshroastsr700(https://github.com/Roastero/freshroastsr700/tree/master/freshroastsr700).
+
+## 0. Requirements
+
+Python >=3.5
+
+You can use the Python installed with your system, but I strongly suggest to install and use the Anaconda Python 3.7 freely available from here:
+http://anaconda.com/download
 
 ## 1. Phidget setup (OPTIONAL)
 
-Install the Phidget driver for your machine: https://www.phidgets.com/docs/Operating_System_Support
+If you have a Phidget temperature sensor, install the Phidget driver for your machine: https://www.phidgets.com/docs/Operating_System_Support
 
 ## 2. Install this Server with: 
 
-Open the Terminal app and type this command:
+Open a terminal or the Terminal app (osx) and type this command:
 
 `pip install SR700_Artisan_Server`
 
@@ -42,7 +55,7 @@ Or like this without a Phidget:
 [State:idle] Temp SR700:150  Target temp: 150 Fan Speed: 1 Time left: 0
 ```
 
-## 4. In Artisan go under help and select Load Settings…
+## 4. In Artisan go under Help and select Load Settings…
 
 Download and use this file if you have a Phidget: https://raw.githubusercontent.com/lucapinello/SR700_Artisan_Server/master/SR700_Artisan_Server/settings/artisan-settings.aset
 
