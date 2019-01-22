@@ -1,7 +1,6 @@
-# SR700_Artisan_Server
+# Freshroast SR700 Artisan Server
 
 Extension of the SR700-Artisan-PDServer (https://github.com/infinigrove/SR700-Artisan-PDServer) to use with the Phidget Temperature Sensor (if available) and to simplify the setup and the configuration with Artisan (https://artisan-scope.org/).
-
 
 ## 1. Phidget setup (OPTIONAL)
 
@@ -23,7 +22,7 @@ If you have Python3 you may need this command instead:
 
 Otherwise with:
 
-`Start_SR700_Artisan_Server.py no_phidget`
+`Start_SR700_Artisan_Server no_phidget`
 
 (both the SR700 Roaster and the Phidget must be attached before starting this command )
 
@@ -45,9 +44,9 @@ Or like this without a Phidget:
 
 ## 4. In Artisan go under help and select Load Settings…
 
-Download and use this file if you have a Phidget: https://raw.githubusercontent.com/lucapinello/SR700-Artisan-PDServer-Phidget/master/SR700-Artisan-PDServer-Phidget/settings/artisan-settings.aset
+Download and use this file if you have a Phidget: https://raw.githubusercontent.com/lucapinello/SR700_Artisan_Server/master/SR700_Artisan_Server/settings/artisan-settings.aset
 
-Or this if you don't have a Phidget: https://raw.githubusercontent.com/lucapinello/SR700-Artisan-PDServer-Phidget/master/SR700-Artisan-PDServer-Phidget/settings/artisan-settings-no-phidget.aset
+Or this if you don't have a Phidget: https://raw.githubusercontent.com/lucapinello/SR700_Artisan_Server/master/SR700_Artisan_Server/settings/artisan-settings-no-phidget.aset
 
 The roasting profiles are created through alarms, a generic profile is already loaded.
 
