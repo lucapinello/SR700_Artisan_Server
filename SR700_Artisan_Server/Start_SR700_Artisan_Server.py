@@ -228,7 +228,8 @@ def main():
         logging.info('Ready!')
 
     except Exception as e:
-        print(e)
+
+        logging.error(e)
 
         if nameserver_process:
             nameserver_process.kill()
