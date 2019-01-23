@@ -178,7 +178,7 @@ def main():
 
         if len(sys.argv) > 1:
 
-            elif sys.argv[1]=='phidget_hub':
+            if sys.argv[1]=='phidget_hub':
                 phidget_use_hub=True
 
             elif sys.argv[1]=='phidget_simple':
