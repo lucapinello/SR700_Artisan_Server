@@ -6,7 +6,7 @@ Extension of the SR700-Artisan-PDServer (https://github.com/infinigrove/SR700-Ar
 
 Install the Phidget driver for your machine: https://www.phidgets.com/docs/Operating_System_Support
 
-## 2. Install this Server with: 
+## 2. Install this Server with:
 
 Open the Terminal app and type this command:
 
@@ -52,9 +52,6 @@ The roasting profiles are created through alarms, a generic profile is already l
 
 Now you are ready to roast!
 
-Hit Start, and keep in mind that the first 30sec are for preheating the machine. 
+Hit Start, and keep in mind that the first 30sec are for preheating the machine.
 
 ## NOTE: You can create custom profiles with this other tool I wrote: https://github.com/lucapinello/create_artisan_alarms_phidget
-
-
-
