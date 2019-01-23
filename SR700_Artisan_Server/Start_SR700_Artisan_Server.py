@@ -215,7 +215,7 @@ def main():
         #Pyro4.naming.startNS()
         time.sleep(1)
 
-        logging.info('Starting Server...')
+        logging.info('Starting Server and waiting for the roaster...')
         daemon = Pyro4.Daemon()                # make a Pyro daemon
         ns = Pyro4.locateNS()
         uri = daemon.register(r)
