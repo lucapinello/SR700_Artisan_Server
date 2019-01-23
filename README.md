@@ -13,7 +13,14 @@ This work was inspired by the SR700-Artisan-PDServer (https://github.com/infinig
 Python >=3.5
 
 You can use the Python installed with your system, but I strongly suggest to install and use the Anaconda Python 3.7 freely available from here:
+
 http://anaconda.com/download
+
+If you are using an old machine with python linked to Python2.x by default you need to type this command:
+
+Linux: update-alternatives --install /usr/bin/python python /usr/bin/python3 10
+
+OSX: unlink /usr/local/bin/python && ln -s /usr/local/bin/python3.3 /usr/local/bin/python
 
 ## 1. Phidget setup (OPTIONAL)
 
