@@ -156,6 +156,9 @@ def main():
         ki=0.0075
         kd=0.9
 
+        nameserver_process=None
+        r=None
+
         # Set logging
 
 
@@ -220,8 +223,12 @@ def main():
         logging.info('Ready!')
 
     except Exception as e:
-        nameserver_process.kill()
-        r.roaster.terminate()
+        if nameserver_process:
+            nameserver_process.kill()
+
+        if r:
+            r.roaster.terminate()
+
         print('Bye!')
         sys.exit(0)
 
