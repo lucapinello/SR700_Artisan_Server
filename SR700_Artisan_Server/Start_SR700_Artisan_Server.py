@@ -40,13 +40,14 @@ def exit_gracefully(signum, frame):
 
 @Pyro4.expose
 class Roaster(object):
-    def __init__(self,use_phidget_temp=True,kp=0.4, ki=0.0075, kd=0.9):
+    def __init__(self,use_phidget_temp=True,phidget_use_hub=False,kp=0.4, ki=0.0075, kd=0.9):
         """Creates a freshroastsr700 object passing in methods included in this
         class."""
 
         self.use_phidget_temp=use_phidget_temp
         self.roaster = SR700Phidget(
-	    use_phidget_temp=use_phidget_temp,
+	       use_phidget_temp=use_phidget_temp,
+           phidget_use_hub=phidget_use_hub,
             update_data_func=self.update_data,
             state_transition_func=self.next_state,
             thermostat=True,
