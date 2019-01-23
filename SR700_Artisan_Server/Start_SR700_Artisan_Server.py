@@ -126,7 +126,8 @@ def main():
 
     try:
         print(
-'''   _____ _____  ______ ___   ___
+'''
+      _____ _____  ______ ___   ___
      / ____|  __ \|____  / _ \ / _ \\
     | (___ | |__) |   / / | | | | | |
      \___ \|  _  /   / /| | | | | | |
@@ -149,6 +150,7 @@ def main():
 
         signal.signal(signal.SIGINT, signal_handler)
         use_phidget_temp=True
+        phidget_use_hub=False
         kp=0.4
         ki=0.0075
         kd=0.9
@@ -176,13 +178,16 @@ def main():
                 kp=0.06
                 ki=0.0075
                 kd=0.01
+            elif sys.argv[1]=='phidget_hub':
+                phidget_use_hub=True
+
             else:
                 print('Please use these commands:\n Start_SR700_Artisan_Server.py\nor\n Start_SR700_Artisan_Server.py no_phidget')
                 sys.exit(1)
 
 
         # Create a roaster object.
-        r = Roaster(use_phidget_temp=use_phidget_temp,kp=kp,ki=ki,kd=kd)
+        r = Roaster(use_phidget_temp=use_phidget_temp,phidget_use_hub=phidget_use_hub,kp=kp,ki=ki,kd=kd)
 
         # Conenct to the roaster.
         r.roaster.auto_connect()
