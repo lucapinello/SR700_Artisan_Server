@@ -188,10 +188,10 @@ def main():
                 sys.exit(1)
         else:
 
-                use_phidget_temp=False
-                kp=0.06
-                ki=0.0075
-                kd=0.01
+            use_phidget_temp=False
+            kp=0.06
+            ki=0.0075
+            kd=0.01
 
 
 
