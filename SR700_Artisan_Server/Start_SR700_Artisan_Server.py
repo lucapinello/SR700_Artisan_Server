@@ -220,9 +220,11 @@ def main():
         ns = Pyro4.locateNS()
         uri = daemon.register(r)
 
+        logging.info('Starting Server and waiting for the roaster2...')
         #print("Ready. Object uri = %s" % uri)      # print the uri so we can use it in the client later
         ns.register("roaster.sr700", uri)
 
+        logging.info('Starting Server and waiting for the roaster3...')
         daemon.requestLoop()
 
         logging.info('Ready!')
