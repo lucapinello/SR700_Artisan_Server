@@ -177,17 +177,22 @@ def main():
 
 
         if len(sys.argv) > 1:
-            if sys.argv[1]=='no_phidget':
+
+            elif sys.argv[1]=='phidget_hub':
+                phidget_use_hub=True
+
+            elif sys.argv[1]=='phidget_simple':
+                phidget_use_hub=False
+            else:
+                print('Please use these commands:\n Start_SR700_Artisan_Server.py\nor\n Start_SR700_Artisan_Server.py no_phidget')
+                sys.exit(1)
+        else:
+
                 use_phidget_temp=False
                 kp=0.06
                 ki=0.0075
                 kd=0.01
-            elif sys.argv[1]=='phidget_hub':
-                phidget_use_hub=True
 
-            else:
-                print('Please use these commands:\n Start_SR700_Artisan_Server.py\nor\n Start_SR700_Artisan_Server.py no_phidget')
-                sys.exit(1)
 
 
         # Create a roaster object.
