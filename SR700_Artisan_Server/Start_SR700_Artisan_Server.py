@@ -147,7 +147,7 @@ def main():
    ''')
 
         print('SR700 Artisan Server - Luca Pinello 2019 (@lucapinello)\n\n')
-        print('Send bugs, suggestions or *green coffee* to lucapinello AT gmail DOT com\n\n')
+        print('Send bugs, suggestions or *green coffee* to lucapinello AT gmail DOT com\n')
 
         signal.signal(signal.SIGINT, signal_handler)
         use_phidget_temp=True
@@ -184,7 +184,9 @@ def main():
             elif sys.argv[1]=='phidget_simple':
                 phidget_use_hub=False
             else:
-                print('Please use these commands:\n Start_SR700_Artisan_Server.py\nor\n Start_SR700_Artisan_Server.py no_phidget')
+                print('Please one of these commands:\n\n1) Start_SR700_Artisan_Server\
+                \n\n2) Start_SR700_Artisan_Server phidget_simple\
+                \n\n3) Start_SR700_Artisan_Server phidget_hub\n')
                 sys.exit(1)
         else:
 
@@ -194,7 +196,7 @@ def main():
             kd=0.01
 
 
-
+        logging.info("Initializing connection with the SR700...")
         # Create a roaster object.
         r = Roaster(use_phidget_temp=use_phidget_temp,phidget_use_hub=phidget_use_hub,kp=kp,ki=ki,kd=kd)
 
@@ -202,9 +204,18 @@ def main():
         r.roaster.auto_connect()
 
         # Wait for the roaster to be connected.
-        while(r.roaster.connected is False):
-            warning("Please connect your roaster...")
-            time.sleep(1)
+        while(not(r.roaster.connected)):
+
+            if r.roaster.phidget_error:
+                raise Exception('Phidget Error!')
+
+            time.sleep(3)
+            logging.info("Still waiting for connection...")
+            time.sleep(3)
+            logging.info('Please check if the roaster is connected')
+
+        if r.roaster.phidget_error:
+            raise Exception('Phidget Error!')
 
         with open(os.devnull, 'w') as fp:
             nameserver_process=sb.Popen(['python', '-m','Pyro4.naming'],stdout=fp)
@@ -215,19 +226,17 @@ def main():
         #Pyro4.naming.startNS()
         time.sleep(1)
 
-        logging.info('Starting Server and waiting for the roaster...')
+        logging.info('Starting Server')
         daemon = Pyro4.Daemon()                # make a Pyro daemon
         ns = Pyro4.locateNS()
         uri = daemon.register(r)
 
-        logging.info('Starting Server and waiting for the roaster2...')
         #print("Ready. Object uri = %s" % uri)      # print the uri so we can use it in the client later
         ns.register("roaster.sr700", uri)
 
-        logging.info('Starting Server and waiting for the roaster3...')
         daemon.requestLoop()
 
-        logging.info('Ready!')
+        logging.info('Server Ready!')
 
     except Exception as e:
 
