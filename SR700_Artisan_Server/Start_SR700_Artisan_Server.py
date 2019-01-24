@@ -210,8 +210,12 @@ def main():
                 raise Exception('Phidget Error!')
 
             time.sleep(3)
-            logging.info("Still waiting for connection...")
+
+            if not(r.roaster.connected):
+                logging.info("Still waiting for connection...")
+
             time.sleep(3)
+
             if not(r.roaster.connected):
                 logging.info('Please check if the roaster is connected')
 
