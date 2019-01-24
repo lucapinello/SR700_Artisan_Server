@@ -221,12 +221,12 @@ def main():
             if r.roaster.phidget_error:
                 raise Exception('Phidget Error!')
 
-            time.sleep(3)
+            time.sleep(2)
 
             if not(r.roaster.connected):
                 logging.info("Still waiting for connection...")
 
-            time.sleep(3)
+            time.sleep(2)
 
             if not(r.roaster.connected):
                 logging.info('Please check if the roaster is connected')
@@ -239,7 +239,6 @@ def main():
         #time.sleep(2)
 
         #server was here
-
 
         uri = daemon.register(r)
 
