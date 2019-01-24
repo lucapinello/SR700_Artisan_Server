@@ -248,7 +248,9 @@ def main():
         if r:
             r.roaster.terminate()
 
-        print('Bye!')
+        print('\nSend bugs, suggestions or *green coffee* to lucapinello AT gmail DOT com\n')
+
+        print('\nBye!')
         sys.exit(0)
 
 
