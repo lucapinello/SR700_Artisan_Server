@@ -196,6 +196,15 @@ def main():
             kd=0.01
 
 
+        logging.info('Starting Nameserver...')
+        #Pyro4.naming.startNS()
+        time.sleep(1)
+
+        logging.info('Starting Server')
+        daemon = Pyro4.Daemon()                # make a Pyro daemon
+        ns = Pyro4.locateNS()
+        uri = daemon.register(r)
+
         logging.info("Initializing connection with the SR700...")
         # Create a roaster object.
         r = Roaster(use_phidget_temp=use_phidget_temp,phidget_use_hub=phidget_use_hub,kp=kp,ki=ki,kd=kd)
@@ -227,14 +236,7 @@ def main():
         #os.system("python -m Pyro4.naming")
         #time.sleep(2)
 
-        logging.info('Starting Nameserver...')
-        #Pyro4.naming.startNS()
-        time.sleep(1)
-
-        logging.info('Starting Server')
-        daemon = Pyro4.Daemon()                # make a Pyro daemon
-        ns = Pyro4.locateNS()
-        uri = daemon.register(r)
+        #server was here
 
         #print("Ready. Object uri = %s" % uri)      # print the uri so we can use it in the client later
         ns.register("roaster.sr700", uri)
