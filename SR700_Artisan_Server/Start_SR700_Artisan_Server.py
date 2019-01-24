@@ -197,13 +197,15 @@ def main():
 
 
         logging.info('Starting Nameserver...')
+        with open(os.devnull, 'w') as fp:
+            nameserver_process=sb.Popen(['python', '-m','Pyro4.naming'],stdout=fp)
         #Pyro4.naming.startNS()
         time.sleep(1)
 
         logging.info('Starting Server')
         daemon = Pyro4.Daemon()                # make a Pyro daemon
         ns = Pyro4.locateNS()
-        uri = daemon.register(r)
+
 
         logging.info("Initializing connection with the SR700...")
         # Create a roaster object.
@@ -231,19 +233,23 @@ def main():
         if r.roaster.phidget_error:
             raise Exception('Phidget Error!')
 
-        with open(os.devnull, 'w') as fp:
-            nameserver_process=sb.Popen(['python', '-m','Pyro4.naming'],stdout=fp)
+
         #os.system("python -m Pyro4.naming")
         #time.sleep(2)
 
         #server was here
 
+
+        uri = daemon.register(r)
+
         #print("Ready. Object uri = %s" % uri)      # print the uri so we can use it in the client later
         ns.register("roaster.sr700", uri)
 
+        logging.info('Server Ready!')
+        
         daemon.requestLoop()
 
-        logging.info('Server Ready!')
+
 
     except Exception as e:
 
