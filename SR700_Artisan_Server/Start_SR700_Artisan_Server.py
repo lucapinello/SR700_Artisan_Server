@@ -199,8 +199,9 @@ def main():
         logging.info('Starting Nameserver...')
         with open(os.devnull, 'w') as fp:
             nameserver_process=sb.Popen(['python', '-m','Pyro4.naming'],stdout=fp)
-        #Pyro4.naming.startNS()
-        time.sleep(1)
+
+        ##Pyro4.naming.startNS()
+        time.sleep(2)
 
         logging.info('Starting Server')
         daemon = Pyro4.Daemon()                # make a Pyro daemon
@@ -246,7 +247,7 @@ def main():
         ns.register("roaster.sr700", uri)
 
         logging.info('Server Ready!')
-        
+
         daemon.requestLoop()
 
 
