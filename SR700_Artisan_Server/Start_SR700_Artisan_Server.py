@@ -15,6 +15,7 @@ import Pyro4
 import Pyro4.naming
 import os
 import subprocess as sb
+import argparse
 
 
 import signal
@@ -40,14 +41,21 @@ def exit_gracefully(signum, frame):
 
 @Pyro4.expose
 class Roaster(object):
-    def __init__(self,use_phidget_temp=True,phidget_use_hub=False,kp=0.4, ki=0.0075, kd=0.9):
+    def __init__(self,use_phidget_temp=True,
+                phidget_use_hub=False,
+                phidget_hub_port=0,
+                phidget_hub_channel=4,
+                kp=0.4, ki=0.0075, kd=0.9):
+
         """Creates a freshroastsr700 object passing in methods included in this
         class."""
 
         self.use_phidget_temp=use_phidget_temp
         self.roaster = SR700Phidget(
-	       use_phidget_temp=use_phidget_temp,
-           phidget_use_hub=phidget_use_hub,
+	        use_phidget_temp=use_phidget_temp,
+            phidget_use_hub=phidget_use_hub,
+            phidget_hub_port=phidget_hub_port,
+            phidget_hub_channel=phidget_hub_channel,
             update_data_func=self.update_data,
             state_transition_func=self.next_state,
             thermostat=True,
@@ -150,18 +158,51 @@ def main():
         print('Send bugs, suggestions or *green coffee* to lucapinello AT gmail DOT com\n')
 
         signal.signal(signal.SIGINT, signal_handler)
-        use_phidget_temp=True
-        phidget_use_hub=False
-        kp=0.4
-        ki=0.0075
-        kd=0.9
+
+        parser = argparse.ArgumentParser(description='Parameters',formatter_class=argparse.ArgumentDefaultsHelpFormatter)
+
+        parser.add_argument('--custom_mode', type=str, help='Running mode: simple, phidget_simple,\
+        phidget_hub if not specified no external sensor will be used,',
+        default='simple',choices=['simple','phidget_simple','phidget_hub'] )
+        parser.add_argument('--phidget_hub_port',  type=int,  default=0)
+        parser.add_argument('--phidget_hub_channel',  type=int,  default=4)
+        parser.add_argument('--kp',  type=float, default=None)
+        parser.add_argument('--ki',  type=float, default=None)
+        parser.add_argument('--kd',  type=float, default=None)
+
+
+        args = parser.parse_args()
+
+        print(args)
+
+        assign_pid_param=lambda v_args,v_default: v_args if v_args else v_default
+
+        if args.custom_mode=='phidget_simple' or args.custom_mode=='phidget_hub':
+
+            use_phidget_temp=True
+
+            kp=assign_pid_param(args.kp,0.4)
+            ki=assign_pid_param(args.ki,0.0075)
+            kd=assign_pid_param(args.kd,0.9)
+
+        else:
+            use_phidget_temp=False
+
+            kp=assign_pid_param(args.kp,0.06)
+            ki=assign_pid_param(args.ki,0.0075)
+            kd=assign_pid_param(args.kd,0.01)
+
+
+        if args.custom_mode=='phidget_hub':
+            phidget_use_hub=True
+        else:
+            phidget_use_hub=False
+
 
         nameserver_process=None
         r=None
 
         # Set logging
-
-
         logging.getLogger("Pyro4.core").setLevel(logging.CRITICAL)
 
         logging.getLogger("Pyro4.name").setLevel(logging.ERROR)
@@ -174,26 +215,6 @@ def main():
                      filemode="w"
                      )
         #logging.basicConfig(filename="RoastControl_debug_log.log",level=logging.DEBUG)
-
-
-        if len(sys.argv) > 1:
-
-            if sys.argv[1]=='phidget_hub':
-                phidget_use_hub=True
-
-            elif sys.argv[1]=='phidget_simple':
-                phidget_use_hub=False
-            else:
-                print('Please one of these commands:\n\n1) Start_SR700_Artisan_Server\
-                \n\n2) Start_SR700_Artisan_Server phidget_simple\
-                \n\n3) Start_SR700_Artisan_Server phidget_hub\n')
-                sys.exit(1)
-        else:
-
-            use_phidget_temp=False
-            kp=0.06
-            ki=0.0075
-            kd=0.01
 
 
         logging.info('Starting Nameserver...')
@@ -210,7 +231,11 @@ def main():
 
         logging.info("Initializing connection with the SR700...")
         # Create a roaster object.
-        r = Roaster(use_phidget_temp=use_phidget_temp,phidget_use_hub=phidget_use_hub,kp=kp,ki=ki,kd=kd)
+        r = Roaster(use_phidget_temp=use_phidget_temp,
+        phidget_use_hub=phidget_use_hub,
+        phidget_hub_port=args.phidget_hub_port,
+        phidget_hub_channel=args.phidget_hub_channel,
+        kp=kp,ki=ki,kd=kd)
 
         # Conenct to the roaster.
         r.roaster.auto_connect()
