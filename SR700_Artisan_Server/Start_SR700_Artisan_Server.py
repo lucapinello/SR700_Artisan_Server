@@ -71,7 +71,7 @@ class Roaster(object):
         if self.roaster.log_info:
 
             if self.use_phidget_temp:
-                logging.info("[State:%s] (Temp SR700:%d) (Temp Phidget %d) (Target temp: %d) (Fan Speed: %d) (Time left: %d)"  % \
+                logging.info("[State:%s](Temp SR700:%d)(Temp Phidget %d)(Target temp: %d)(Fan Speed: %d)(Time left: %d)"  % \
                 ( str(cur_state),
                 self.roaster.current_temp,
                 self.roaster.current_temp_phidget,
@@ -79,7 +79,7 @@ class Roaster(object):
                 self.roaster.fan_speed,
                 self.roaster.time_remaining))
             else:
-                logging.info("[State:%s] Temp SR700:%d Target temp: %d Fan Speed: %d Time left: %d"  % \
+                logging.info("[State:%s](Temp SR700:%d)(Target temp: %d)(Fan Speed: %d)(Time left: %d)"  % \
                 ( str(cur_state),
                 self.roaster.current_temp,
                 self.roaster.target_temp,
