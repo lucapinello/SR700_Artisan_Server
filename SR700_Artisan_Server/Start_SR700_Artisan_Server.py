@@ -47,7 +47,7 @@ class Roaster(object):
             ki=ki,
             kd=kd)
 
-    def update_data(self,log_frequency=1):
+    def update_data(self,log_frequency=2):
         """This is a method that will be called every time a packet is opened
         from the roaster."""
         cur_state = self.roaster.get_roaster_state()
