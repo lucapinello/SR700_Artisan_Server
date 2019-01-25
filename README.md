@@ -10,17 +10,11 @@ This work was inspired by the SR700-Artisan-PDServer (https://github.com/infinig
 
 ## 0. Requirements
 
-Python >=3.5
+Python >=2.7
 
 You can use the Python installed with your system, but I strongly suggest to install and use the Anaconda Python 3.7 freely available from here:
 
 http://anaconda.com/download
-
-If you are using an old machine with python linked to Python2.x by default you need to type this command:
-
-Linux: update-alternatives --install /usr/bin/python python /usr/bin/python3 10
-
-OSX: unlink /usr/local/bin/python && ln -s /usr/local/bin/python3.3 /usr/local/bin/python
 
 ## 1. Phidget setup (OPTIONAL)
 
@@ -32,19 +26,17 @@ Open a terminal or the Terminal app (osx) and type this command:
 
 `pip install SR700_Artisan_Server`
 
-If you have Python3 you may need this command instead:
-
-`pip3 install SR700_Artisan_Server`
-
-## 3. If you have a Phidget start the server in the Terminal with:
+## 3. Start the server in the Terminal with:
 
 `Start_SR700_Artisan_Server`  
 
-Otherwise with:
+If you a a Phidget without an hub, start the server with:
 
-`Start_SR700_Artisan_Server no_phidget`
+`Start_SR700_Artisan_Server no_phidget --enable_extension phidget_simple`
 
-(both the SR700 Roaster and the Phidget must be attached before starting this command )
+If you a a Phidget with the hub, start the server with:
+
+`Start_SR700_Artisan_Server no_phidget --enable_extension phidget_hub`
 
 If the server is running correctly you should see something like this if you have a Phidget:
 ```
@@ -74,4 +66,4 @@ Now you are ready to roast!
 
 Hit Start, and keep in mind that the first 30sec are for preheating the machine.
 
-## NOTE: You can create custom profiles with this other tool I wrote: https://github.com/lucapinello/create_artisan_alarms_phidget
+## NOTE: You can create custom profiles with this other tool I wrote: https://github.com/lucapinello/SR700_Artisan_Profile_Builder
