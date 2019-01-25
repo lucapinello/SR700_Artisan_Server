@@ -240,7 +240,7 @@ def main():
         # Conenct to the roaster.
         r.roaster.auto_connect()
 
-        print ('BEFORE:',roaster.phidget_error)
+        print ('BEFORE:',r.roaster.phidget_error)
 
         # Wait for the roaster to be connected.
         while(not(r.roaster.connected)):
