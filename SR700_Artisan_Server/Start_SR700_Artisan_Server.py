@@ -63,28 +63,28 @@ class Roaster(object):
             ki=ki,
             kd=kd)
 
-    def update_data(self):
+    def update_data(self,log_frequency=1):
         """This is a method that will be called every time a packet is opened
         from the roaster."""
         cur_state = self.roaster.get_roaster_state()
 
         if self.roaster.log_info:
-
-            if self.use_phidget_temp:
-                logging.info("[State:%s](Temp SR700:%d)(Temp Phidget %d)(Target temp: %d)(Fan Speed: %d)(Time left: %d)"  % \
-                ( str(cur_state),
-                self.roaster.current_temp,
-                self.roaster.current_temp_phidget,
-                self.roaster.target_temp,
-                self.roaster.fan_speed,
-                self.roaster.time_remaining))
-            else:
-                logging.info("[State:%s](Temp SR700:%d)(Target temp: %d)(Fan Speed: %d)(Time left: %d)"  % \
-                ( str(cur_state),
-                self.roaster.current_temp,
-                self.roaster.target_temp,
-                self.roaster.fan_speed,
-                self.roaster.time_remaining))
+            if (int(time.time()) %log_frequency) ==0:
+                if self.use_phidget_temp:
+                    logging.info("[State:%s](Temp SR700:%d)(Temp Phidget %d)(Target temp: %d)(Fan Speed: %d)(Time left: %d)"  % \
+                    ( str(cur_state),
+                    self.roaster.current_temp,
+                    self.roaster.current_temp_phidget,
+                    self.roaster.target_temp,
+                    self.roaster.fan_speed,
+                    self.roaster.time_remaining))
+                else:
+                    logging.info("[State:%s](Temp SR700:%d)(Target temp: %d)(Fan Speed: %d)(Time left: %d)"  % \
+                    ( str(cur_state),
+                    self.roaster.current_temp,
+                    self.roaster.target_temp,
+                    self.roaster.fan_speed,
+                    self.roaster.time_remaining))
 
     def next_state(self):
         """This is a method that will be called when the time remaining ends.
