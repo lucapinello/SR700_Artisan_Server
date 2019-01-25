@@ -53,22 +53,24 @@ class Roaster(object):
         cur_state = self.roaster.get_roaster_state()
 
         if self.roaster.log_info:
-            if ( int(time.time()) % log_frequency) ==0:
-                if self.use_phidget_temp:
-                    logging.info("[State:%s](Temp SR700:%d)(Temp Phidget %d)(Target temp: %d)(Fan Speed: %d)(Time left: %d)"  % \
-                    ( str(cur_state),
-                    self.roaster.current_temp,
-                    self.roaster.current_temp_phidget,
-                    self.roaster.target_temp,
-                    self.roaster.fan_speed,
-                    self.roaster.time_remaining))
-                else:
-                    logging.info("[State:%s](Temp SR700:%d)(Target temp: %d)(Fan Speed: %d)(Time left: %d)"  % \
-                    ( str(cur_state),
-                    self.roaster.current_temp,
-                    self.roaster.target_temp,
-                    self.roaster.fan_speed,
-                    self.roaster.time_remaining))
+
+            if self.use_phidget_temp:
+                logging.info("[State:%s](Temp SR700:%d)(Temp Phidget %d)(Target temp: %d)(Fan Speed: %d)(Time left: %d)"  % \
+                ( str(cur_state),
+                self.roaster.current_temp,
+                self.roaster.current_temp_phidget,
+                self.roaster.target_temp,
+                self.roaster.fan_speed,
+                self.roaster.time_remaining))
+            else:
+                logging.info("[State:%s](Temp SR700:%d)(Target temp: %d)(Fan Speed: %d)(Time left: %d)"  % \
+                ( str(cur_state),
+                self.roaster.current_temp,
+                self.roaster.target_temp,
+                self.roaster.fan_speed,
+                self.roaster.time_remaining))
+
+                sleep(log_frequency)
 
     def next_state(self):
         """This is a method that will be called when the time remaining ends.
