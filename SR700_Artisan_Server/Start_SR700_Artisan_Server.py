@@ -161,7 +161,7 @@ def main():
 
         parser = argparse.ArgumentParser(description='Parameters',formatter_class=argparse.ArgumentDefaultsHelpFormatter)
 
-        parser.add_argument('--custom_mode', type=str, help='Running mode: simple, phidget_simple,\
+        parser.add_argument('--enable_extension', type=str, help='Running mode: phidget_simple,\
         phidget_hub if not specified no external sensor will be used,',
         default='simple',choices=['simple','phidget_simple','phidget_hub'] )
         parser.add_argument('--phidget_hub_port',  type=int,  default=0)
@@ -177,7 +177,7 @@ def main():
 
         assign_pid_param=lambda v_args,v_default: v_args if v_args else v_default
 
-        if args.custom_mode=='phidget_simple' or args.custom_mode=='phidget_hub':
+        if args.enable_extension=='phidget_simple' or args.enable_extension=='phidget_hub':
 
             use_phidget_temp=True
 
@@ -193,7 +193,7 @@ def main():
             kd=assign_pid_param(args.kd,0.01)
 
 
-        if args.custom_mode=='phidget_hub':
+        if args.enable_extension=='phidget_hub':
             phidget_use_hub=True
         else:
             phidget_use_hub=False
@@ -222,7 +222,7 @@ def main():
             nameserver_process=sb.Popen(['python', '-m','Pyro4.naming'],stdout=fp)
 
         ##Pyro4.naming.startNS()
-        time.sleep(2)
+        time.sleep(1)
 
         logging.info('Starting Server')
         daemon = Pyro4.Daemon()                # make a Pyro daemon
@@ -240,11 +240,13 @@ def main():
         # Conenct to the roaster.
         r.roaster.auto_connect()
 
+        print ('BEFORE:',roaster.phidget_error)
+
         # Wait for the roaster to be connected.
         while(not(r.roaster.connected)):
 
-            if r.roaster.phidget_error:
-                raise Exception('Phidget Error!')
+            #if r.roaster.phidget_error:
+            #    raise Exception('Phidget Error!')
 
             time.sleep(2)
 
@@ -258,12 +260,6 @@ def main():
 
         if r.roaster.phidget_error:
             raise Exception('Phidget Error!')
-
-
-        #os.system("python -m Pyro4.naming")
-        #time.sleep(2)
-
-        #server was here
 
         uri = daemon.register(r)
 
