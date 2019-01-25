@@ -225,7 +225,7 @@ def main():
         ##Pyro4.naming.startNS()
         time.sleep(1)
 
-        logging.info('Starting Server')
+        logging.info('Starting Server...')
         daemon = Pyro4.Daemon()                # make a Pyro daemon
         ns = Pyro4.locateNS()
 
@@ -258,7 +258,7 @@ def main():
             time.sleep(2)
 
             if not(r.roaster.connected):
-                logging.info('Please check if the roaster is connected')
+                logging.info('Please check if the roaster is connected.')
 
         if r.roaster.phidget_error:
             raise Exception('Phidget Error!')
@@ -268,8 +268,6 @@ def main():
         logging.info('Server Ready!')
         r.roaster.log_info=True
         daemon.requestLoop()
-
-
 
 
 
