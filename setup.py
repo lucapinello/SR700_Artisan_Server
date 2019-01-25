@@ -26,6 +26,5 @@ setup(
     author='Luca Pinello',
     license='GPLv3',
     install_requires=['freshroastsr700_phidget>=0.4','Pyro4','datetime'],
-    python_requires='>3.5.2',
     entry_points = {"console_scripts": entry_points_list},
 )
