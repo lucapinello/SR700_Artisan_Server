@@ -22,22 +22,6 @@ import signal
 import time
 import sys
 
-def exit_gracefully(signum, frame):
-    # restore the original signal handler as otherwise evil things will happen
-    # in raw_input when CTRL+C is pressed, and our signal handler is not re-entrant
-    signal.signal(signal.SIGINT, original_sigint)
-
-    try:
-        if raw_input("\nReally quit? (y/n)> ").lower().startswith('y'):
-            sys.exit(1)
-
-    except KeyboardInterrupt:
-        print("Ok ok, quitting")
-        sys.exit(1)
-
-    # restore the exit gracefully handler here
-    signal.signal(signal.SIGINT, exit_gracefully)
-
 
 @Pyro4.expose
 class Roaster(object):
@@ -69,7 +53,7 @@ class Roaster(object):
         cur_state = self.roaster.get_roaster_state()
 
         if self.roaster.log_info:
-            if (int(time.time()) %log_frequency) ==0:
+            if ( int(time.time()) % log_frequency) ==0:
                 if self.use_phidget_temp:
                     logging.info("[State:%s](Temp SR700:%d)(Temp Phidget %d)(Target temp: %d)(Fan Speed: %d)(Time left: %d)"  % \
                     ( str(cur_state),
