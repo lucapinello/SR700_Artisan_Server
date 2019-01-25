@@ -175,7 +175,6 @@ def main():
 
         args = parser.parse_args()
 
-        print(args)
 
         assign_pid_param=lambda v_args,v_default: v_args if v_args else v_default
 
@@ -239,12 +238,11 @@ def main():
         phidget_hub_channel=args.phidget_hub_channel,
         kp=kp,ki=ki,kd=kd)
 
-        roaster.log_info=False
+        r.roaster.log_info=False
 
         # Conenct to the roaster.
         r.roaster.auto_connect()
 
-        print ('BEFORE:',r.roaster.phidget_error)
 
         # Wait for the roaster to be connected.
         while(not(r.roaster.connected)):
@@ -270,7 +268,7 @@ def main():
         daemon.requestLoop()
         logging.info('Server Ready!')
 
-        roaster.log_info=True
+        r.roaster.log_info=True
 
 
     except Exception as e:
