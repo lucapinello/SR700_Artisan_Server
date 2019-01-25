@@ -68,21 +68,23 @@ class Roaster(object):
         from the roaster."""
         cur_state = self.roaster.get_roaster_state()
 
-        if self.use_phidget_temp:
-            logging.info("[State:%s] Temp SR700:%d Temp Phidget %d Target temp: %d Fan Speed: %d Time left: %d"  % \
-            ( str(cur_state),
-            self.roaster.current_temp,
-            self.roaster.current_temp_phidget,
-            self.roaster.target_temp,
-            self.roaster.fan_speed,
-            self.roaster.time_remaining))
-        else:
-            logging.info("[State:%s] Temp SR700:%d Target temp: %d Fan Speed: %d Time left: %d"  % \
-            ( str(cur_state),
-            self.roaster.current_temp,
-            self.roaster.target_temp,
-            self.roaster.fan_speed,
-            self.roaster.time_remaining))
+        if self.roaster.log_info:
+
+            if self.use_phidget_temp:
+                logging.info("[State:%s] Temp SR700:%d Temp Phidget %d Target temp: %d Fan Speed: %d Time left: %d"  % \
+                ( str(cur_state),
+                self.roaster.current_temp,
+                self.roaster.current_temp_phidget,
+                self.roaster.target_temp,
+                self.roaster.fan_speed,
+                self.roaster.time_remaining))
+            else:
+                logging.info("[State:%s] Temp SR700:%d Target temp: %d Fan Speed: %d Time left: %d"  % \
+                ( str(cur_state),
+                self.roaster.current_temp,
+                self.roaster.target_temp,
+                self.roaster.fan_speed,
+                self.roaster.time_remaining))
 
     def next_state(self):
         """This is a method that will be called when the time remaining ends.
@@ -237,6 +239,8 @@ def main():
         phidget_hub_channel=args.phidget_hub_channel,
         kp=kp,ki=ki,kd=kd)
 
+        roaster.log_info=False
+
         # Conenct to the roaster.
         r.roaster.auto_connect()
 
@@ -245,8 +249,8 @@ def main():
         # Wait for the roaster to be connected.
         while(not(r.roaster.connected)):
 
-            #if r.roaster.phidget_error:
-            #    raise Exception('Phidget Error!')
+            if r.roaster.phidget_error:
+                raise Exception('Phidget Error!')
 
             time.sleep(2)
 
@@ -262,14 +266,11 @@ def main():
             raise Exception('Phidget Error!')
 
         uri = daemon.register(r)
-
-        #print("Ready. Object uri = %s" % uri)      # print the uri so we can use it in the client later
         ns.register("roaster.sr700", uri)
-
+        daemon.requestLoop()
         logging.info('Server Ready!')
 
-        daemon.requestLoop()
-
+        roaster.log_info=True
 
 
     except Exception as e:
