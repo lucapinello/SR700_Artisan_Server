@@ -265,9 +265,10 @@ def main():
 
         uri = daemon.register(r)
         ns.register("roaster.sr700", uri)
+        logging.info('Server Ready!')
         r.roaster.log_info=True
         daemon.requestLoop()
-        logging.info('Server Ready!')
+
 
 
 
