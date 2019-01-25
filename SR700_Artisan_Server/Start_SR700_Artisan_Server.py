@@ -70,7 +70,7 @@ class Roaster(object):
                 self.roaster.fan_speed,
                 self.roaster.time_remaining))
 
-            sleep(log_frequency)
+            time.sleep(log_frequency)
 
     def next_state(self):
         """This is a method that will be called when the time remaining ends.
