@@ -196,7 +196,7 @@ def main():
 
         logging.basicConfig(level=logging.INFO,
                      #format='%(levelname)-5s @ %(asctime)s:-[[\t%(message)s]]-',
-                     format='-[[\t%(message)s\t]]-',
+                     format='-[   %(message)s   ]-',
                      datefmt='%a, %d %b %Y %H:%M:%S',
                      stream=sys.stderr,
                      filemode="w"
@@ -263,7 +263,7 @@ def main():
 
         if nameserver_process:
             nameserver_process.kill()
-    
+
         if r:
             r.roaster.terminate()
 
