@@ -196,7 +196,7 @@ def main():
 
         logging.basicConfig(level=logging.INFO,
                      #format='%(levelname)-5s @ %(asctime)s:-[[\t%(message)s]]-',
-                     format='-[   %(message)s   ]-',
+                     format='-[ %(message)s ]-',
                      datefmt='%a, %d %b %Y %H:%M:%S',
                      stream=sys.stderr,
                      filemode="w"
