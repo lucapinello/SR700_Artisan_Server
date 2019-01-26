@@ -121,26 +121,26 @@ class Roaster(object):
 
 def main():
 
-#     try:
-#         print(
-# '''
-#       _____ _____  ______ ___   ___
-#      / ____|  __ \|____  / _ \ / _ \\
-#     | (___ | |__) |   / / | | | | | |
-#      \___ \|  _  /   / /| | | | | | |
-#      ____) | | \ \  / / | |_| | |_| |
-#     |_____/|_|  \_\/_/   \___/ \___/
-#      /\        | | (_)
-#     /  \   _ __| |_ _ ___  __ _ _ __
-#    / /\ \ | '__| __| / __|/ _` | '_ \\
-#   / ____ \| |  | |_| \__ \ (_| | | | |
-#  /_/ ___\_\_|   \__|_|___/\__,_|_| |_|
-#     / ____|
-#    | (___   ___ _ ____   _____ _ __
-#     \___ \ / _ \ '__\ \ / / _ \ '__|
-#     ____) |  __/ |   \ V /  __/ |
-#    |_____/ \___|_|    \_/ \___|_|
-#    ''')
+    try:
+        print(
+'''
+      _____ _____  ______ ___   ___
+     / ____|  __ \|____  / _ \ / _ \\
+    | (___ | |__) |   / / | | | | | |
+     \___ \|  _  /   / /| | | | | | |
+     ____) | | \ \  / / | |_| | |_| |
+    |_____/|_|  \_\/_/   \___/ \___/
+     /\        | | (_)
+    /  \   _ __| |_ _ ___  __ _ _ __
+   / /\ \ | '__| __| / __|/ _` | '_ \\
+  / ____ \| |  | |_| \__ \ (_| | | | |
+ /_/ ___\_\_|   \__|_|___/\__,_|_| |_|
+    / ____|
+   | (___   ___ _ ____   _____ _ __
+    \___ \ / _ \ '__\ \ / / _ \ '__|
+    ____) |  __/ |   \ V /  __/ |
+   |_____/ \___|_|    \_/ \___|_|
+   ''')
 
         print('SR700 Artisan Server - Luca Pinello 2019 (@lucapinello)\n\n')
         print('Send bugs, suggestions or *green coffee* to lucapinello AT gmail DOT com\n')
@@ -257,20 +257,20 @@ def main():
 
 
 
-    # except Exception as e:
-    #
-    #     logging.error(e)
-    #
-    #     if nameserver_process:
-    #         nameserver_process.kill()
-    #
-    #     if r:
-    #         r.roaster.terminate()
-    #
-    #     print('\nSend bugs, suggestions or *green coffee* to lucapinello AT gmail DOT com\n')
-    #
-    #     print('Bye!\n')
-    #     sys.exit(0)
+    except Exception as e:
+
+        logging.error(e)
+
+        if nameserver_process:
+            nameserver_process.kill()
+    
+        if r:
+            r.roaster.terminate()
+
+        print('\nSend bugs, suggestions or *green coffee* to lucapinello AT gmail DOT com\n')
+
+        print('Bye!\n')
+        sys.exit(0)
 
 
 def signal_handler(sig, frame):
