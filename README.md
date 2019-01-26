@@ -32,11 +32,11 @@ Open a terminal or the Terminal app (osx) and type this command:
 
 If you a a Phidget without an hub, start the server with:
 
-`Start_SR700_Artisan_Server no_phidget --enable_extension phidget_simple`
+`Start_SR700_Artisan_Server --enable_extension phidget_simple`
 
 If you a a Phidget with the hub, start the server with:
 
-`Start_SR700_Artisan_Server no_phidget --enable_extension phidget_hub`
+`Start_SR700_Artisan_Server --enable_extension phidget_hub`
 
 If the server is running correctly you should see something like this if you have a Phidget:
 ```
