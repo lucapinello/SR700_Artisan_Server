@@ -17,7 +17,7 @@ entry_points_list=['{0}={1}.{0}:main'.format(name.split('.')[0],'SR700_Artisan_S
 
 setup(
     name='SR700_Artisan_Server',
-    version=0.7,
+    version=0.8,
     packages = ["SR700_Artisan_Server"],
     package_dir={'SR700_Artisan_Server': 'SR700_Artisan_Server'},
     include_package_data = True,
@@ -25,6 +25,6 @@ setup(
     url='https://github.com/lucapinello/SR700-Artisan-Server',
     author='Luca Pinello',
     license='GPLv3',
-    install_requires=['freshroastsr700_phidget>=0.5','Pyro4','datetime'],
+    install_requires=['freshroastsr700_phidget>=0.6','Pyro4','datetime'],
     entry_points = {"console_scripts": entry_points_list},
 )
