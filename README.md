@@ -28,7 +28,7 @@ Open a terminal or the Terminal app (osx) and type this command:
 
 To update from an old version type:
 
-`pip install SR700_Artisan_Server==0.8`
+`pip install SR700_Artisan_Server==0.9`
 
 ## 3. Start the server in the Terminal with:
 
