@@ -42,6 +42,17 @@ If you a a Phidget with the hub, start the server with:
 
 `Start_SR700_Artisan_Server --enable_extension phidget_hub`
 
+Depending on your hub setup you may need to change hub port and channel adding these two flags:
+  
+  ```
+  --phidget_hub_port PHIDGET_HUB_PORT
+  --phidget_hub_channel PHIDGET_HUB_CHANNEL
+  ```
+  
+For example, to use the hub port 0 and the channel 1:
+
+`Start_SR700_Artisan_Server --enable_extension phidget_hub --phidget_hub_port 0  --phidget_hub_channel 1`
+
 If the server is running correctly you should see something like this if you have a Phidget:
 ```
 [State:idle] Temp SR700:150 Temp Phidget 52 Target temp: 150 Fan Speed: 1 Time left: 0
