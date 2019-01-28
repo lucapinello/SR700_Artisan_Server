@@ -58,7 +58,13 @@ Or like this without a Phidget:
 [State:idle] Temp SR700:150  Target temp: 150 Fan Speed: 1 Time left: 0
 ```
 
-## 4. In Artisan go under Help and select Load Settings…
+## 4. Start Artisan
+
+Important if you are on a MAC start Artisan from the Terminal app with this command:
+
+`/Applications/Artisan.app/Contents/MacOS/Artisan`
+
+## 5. In Artisan go under Help and select Load Settings…
 
 Download and use this file if you have a Phidget: https://raw.githubusercontent.com/lucapinello/SR700_Artisan_Server/master/SR700_Artisan_Server/settings/artisan-settings.aset
 
