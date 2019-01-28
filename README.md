@@ -60,7 +60,7 @@ Or like this without a Phidget:
 
 ## 4. Start Artisan
 
-Important if you are on a MAC start Artisan from the Terminal app with this command:
+**Important** if you are on a Mac start Artisan **from the Terminal app** with this command:
 
 `/Applications/Artisan.app/Contents/MacOS/Artisan`
 
