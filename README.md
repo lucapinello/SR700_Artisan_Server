@@ -28,7 +28,7 @@ Open a terminal or the Terminal app (osx) and type this command:
 
 To update from an old version type:
 
-`pip install SR700_Artisan_Server==0.8`
+`pip install SR700_Artisan_Server==0.9`
 
 ## 3. Start the server in the Terminal with:
 
@@ -41,6 +41,17 @@ If you a a Phidget without an hub, start the server with:
 If you a a Phidget with the hub, start the server with:
 
 `Start_SR700_Artisan_Server --enable_extension phidget_hub`
+
+Depending on your hub setup you may need to change hub port and channel adding these two flags:
+  
+  ```
+  --phidget_hub_port PHIDGET_HUB_PORT
+  --phidget_hub_channel PHIDGET_HUB_CHANNEL
+  ```
+  
+For example, to use the hub port 0 and the channel 1:
+
+`Start_SR700_Artisan_Server --enable_extension phidget_hub --phidget_hub_port 0  --phidget_hub_channel 1`
 
 If the server is running correctly you should see something like this if you have a Phidget:
 ```
@@ -58,7 +69,13 @@ Or like this without a Phidget:
 [State:idle] Temp SR700:150  Target temp: 150 Fan Speed: 1 Time left: 0
 ```
 
-## 4. In Artisan go under Help and select Load Settings…
+## 4. Start Artisan
+
+**Important** if you are on a Mac start Artisan **from the Terminal app** with this command:
+
+`/Applications/Artisan.app/Contents/MacOS/Artisan`
+
+## 5. In Artisan go under Help and select Load Settings…
 
 Download and use this file if you have a Phidget: https://raw.githubusercontent.com/lucapinello/SR700_Artisan_Server/master/SR700_Artisan_Server/settings/artisan-settings.aset
 
