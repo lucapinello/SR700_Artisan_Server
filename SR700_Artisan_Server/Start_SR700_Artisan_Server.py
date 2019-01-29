@@ -28,7 +28,7 @@ class Roaster(object):
     def __init__(self,use_phidget_temp=True,
                 phidget_use_hub=False,
                 phidget_hub_port=0,
-                phidget_hub_channel=1,
+                phidget_hub_channel=0,
                 kp=0.4, ki=0.0075, kd=0.9):
 
         """Creates a freshroastsr700 object passing in methods included in this
@@ -153,7 +153,7 @@ def main():
         phidget_hub if not specified no external sensor will be used,',
         default='simple',choices=['simple','phidget_simple','phidget_hub'] )
         parser.add_argument('--phidget_hub_port',  type=int,  default=0)
-        parser.add_argument('--phidget_hub_channel',  type=int,  default=1)
+        parser.add_argument('--phidget_hub_channel',  type=int,  default=0)
         parser.add_argument('--kp',  type=float, default=None)
         parser.add_argument('--ki',  type=float, default=None)
         parser.add_argument('--kd',  type=float, default=None)
