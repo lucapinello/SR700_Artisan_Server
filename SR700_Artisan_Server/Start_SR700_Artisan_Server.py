@@ -140,7 +140,7 @@ class Roaster(object):
             -self.roaster.current_temp_phidget if self.fan_manual_mode else self.roaster.current_temp_phidget,
         else: #if we don't have a second probe et and bt are the same
             return -self.roaster.current_temp if self.temp_manual_mode else self.roaster.current_temp,\
-            -self.roaster.current_temp if self.temp_manual_mode else self.roaster.current_temp,
+            -self.roaster.current_temp if self.fan_manual_mode else self.roaster.current_temp,
 
 
 
