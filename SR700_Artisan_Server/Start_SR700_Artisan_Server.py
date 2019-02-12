@@ -135,6 +135,7 @@ class Roaster(object):
         return self.roaster.current_temp,self.roaster.current_temp_phidget
 
     def output_temps(self):
+
         if self.use_phidget_temp:
             return -self.roaster.current_temp if self.temp_manual_mode else self.roaster.current_temp,\
             -self.roaster.current_temp_phidget if self.fan_manual_mode else self.roaster.current_temp_phidget,
@@ -176,7 +177,7 @@ def main():
 
         parser.add_argument('--enable_extension', type=str, help='Running mode: phidget_simple,\
         phidget_hub if not specified no external sensor will be used,',
-        default='simple',choices=['simple','phidget_simple','phidget_hub'] )
+        default='simple',choices=['phidget_simple','phidget_hub'] )
         parser.add_argument('--phidget_hub_port',  type=int,  default=0)
         parser.add_argument('--phidget_hub_channel',  type=int,  default=0)
         parser.add_argument('--kp',  type=float, default=None)
