@@ -35,6 +35,8 @@ class Roaster(object):
         class."""
 
         self.use_phidget_temp=use_phidget_temp
+        self.temp_manual_mode=False
+        self.fan_manual_mode=False
         self.roaster = SR700Phidget(
 	        use_phidget_temp=use_phidget_temp,
             phidget_use_hub=phidget_use_hub,
@@ -46,6 +48,19 @@ class Roaster(object):
             kp=kp,
             ki=ki,
             kd=kd)
+
+
+    def enable_temp_manual_mode(self):
+        self.temp_manual_mode=True
+
+    def disable_temp_manual_mode(self):
+        self.temp_manual_mode=False
+
+    def enable_fan_manual_mode(self):
+        self.fan_manual_mode=True
+
+    def disable_fan_manual_mode(self):
+        self.fan_manual_mode=False
 
     def update_data(self):
         """This is a method that will be called every time a packet is opened
@@ -118,6 +133,16 @@ class Roaster(object):
         cur_temp = str(self.roaster.current_temp)
         ret_state = cur_temp + cur_state
         return self.roaster.current_temp,self.roaster.current_temp_phidget
+
+    def output_temps(self):
+        if self.use_phidget_temp:
+            return -self.roaster.current_temp if self.temp_manual_mode else self.roaster.current_temp,\
+            -self.roaster.current_temp_phidget if self.fan_manual_mode else self.roaster.current_temp_phidget,
+        else: #if we don't have a second probe et and bt are the same
+            return -self.roaster.current_temp if self.temp_manual_mode else self.roaster.current_temp,\
+            -self.roaster.current_temp if self.temp_manual_mode else self.roaster.current_temp,
+
+
 
 def main():
 
