@@ -8,7 +8,7 @@ import sys
 def main():
 
     roast_control = Pyro4.Proxy("PYRONAME:roaster.sr700")
-    roast_control.enable_temp_manual_mode()
+    roast_control.enable_fan_manual_mode()
 
 
 if __name__ == '__main__':
