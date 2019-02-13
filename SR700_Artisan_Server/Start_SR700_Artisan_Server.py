@@ -136,12 +136,19 @@ class Roaster(object):
 
     def output_temps(self):
 
+        et=self.roaster.current_temp
+
         if self.use_phidget_temp:
-            return -self.roaster.current_temp if self.temp_manual_mode else self.roaster.current_temp,\
-            -self.roaster.current_temp_phidget if self.fan_manual_mode else self.roaster.current_temp_phidget,
-        else: #if we don't have a second probe et and bt are the same
-            return -self.roaster.current_temp if self.temp_manual_mode else self.roaster.current_temp,\
-            -self.roaster.current_temp if self.fan_manual_mode else self.roaster.current_temp,
+            bt=self.roaster.current_temp_phidget
+        else:
+            bt=et #in normal mode we have only the sr700 reading
+
+        if self.temp_manual_mode:
+            et=-et
+        if self.fan_manual_mode:
+            bt=-bt
+
+        return  et,bt
 
 
 
