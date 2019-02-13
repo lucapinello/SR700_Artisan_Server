@@ -77,9 +77,7 @@ Or like this without a Phidget:
 
 ## 5. In Artisan go under Help and select Load Settings…
 
-Download and use this file if you have a Phidget: https://raw.githubusercontent.com/lucapinello/SR700_Artisan_Server/master/SR700_Artisan_Server/settings/artisan-settings.aset
-
-Or this if you don't have a Phidget: https://raw.githubusercontent.com/lucapinello/SR700_Artisan_Server/master/SR700_Artisan_Server/settings/artisan-settings-no-phidget.aset
+Download and use this file: https://raw.githubusercontent.com/lucapinello/SR700_Artisan_Server/master/SR700_Artisan_Server/settings/artisan-settings.aset
 
 The roasting profiles are created through alarms, a generic profile is already loaded.
 
@@ -88,3 +86,5 @@ Now you are ready to roast!
 Hit Start, and keep in mind that the first 30sec are for preheating the machine.
 
 ## NOTE: You can create custom profiles with this other tool I wrote: https://github.com/lucapinello/SR700_Artisan_Profile_Builder
+
+You can also disable the automatic changes in temperature and fan using the buttons: Temp Manual and Fan Manual. The buttons Temp Alarm and Fan Alarm enable instead the alarm mode.
