@@ -6,7 +6,9 @@ import Pyro4
 import sys
 
 def main():
-    new_roaster_speed = int(int(sys.argv[1])/10)
+    #new_roaster_speed = int(int(sys.argv[1])/10)
+
+    new_roaster_speed = int(sys.argv[1])
 
     roast_control = Pyro4.Proxy("PYRONAME:roaster.sr700")
     if int(new_roaster_speed) < 1:
