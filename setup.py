@@ -17,7 +17,7 @@ entry_points_list=['{0}={1}.{0}:main'.format(name.split('.')[0],'SR700_Artisan_S
 
 setup(
     name='SR700_Artisan_Server',
-    version=1.2,
+    version=1.3,
     packages = ["SR700_Artisan_Server"],
     package_dir={'SR700_Artisan_Server': 'SR700_Artisan_Server'},
     include_package_data = True,
