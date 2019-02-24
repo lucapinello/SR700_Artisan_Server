@@ -4,6 +4,7 @@
 # Roaster Run Recipe
 
 import Pyro4
+import time
 
 def main():
     roast_control = Pyro4.Proxy("PYRONAME:roaster.sr700")
@@ -11,6 +12,8 @@ def main():
     roast_control.enable_fan_manual_mode()
     roast_control.set_fan_speed(9)
     roast_control.run_cooling()
+    time.sleep(2)
+    roast_control.set_fan_speed(9)
 
 if __name__ == '__main__':
     main()
