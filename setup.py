@@ -25,6 +25,6 @@ setup(
     url='https://github.com/lucapinello/SR700-Artisan-Server',
     author='Luca Pinello',
     license='GPLv3',
-    install_requires=['freshroastsr700_phidget>=0.7','Pyro4','datetime','SR700_Artisan_Profile_Builder>=0.9'],
+    install_requires=['freshroastsr700_phidget>=0.8','Pyro4','datetime','SR700_Artisan_Profile_Builder>=0.9'],
     entry_points = {"console_scripts": entry_points_list},
 )
