@@ -16,6 +16,10 @@ You can use the Python installed with your system, but I strongly suggest to ins
 
 http://anaconda.com/download
 
+On Windows machine unfortunately you have to use speficially Python 3.5 If you have Anaconda install you can do this with:
+
+`conda install python=3.5`
+
 ## 1. Phidget setup (OPTIONAL)
 
 If you have a Phidget temperature sensor, install the Phidget driver for your machine: https://www.phidgets.com/docs/Operating_System_Support
@@ -28,7 +32,9 @@ Open a terminal or the Terminal app (osx) and type this command:
 
 To update from an old version type:
 
-`pip install SR700_Artisan_Server==1.0`
+`pip install SR700_Artisan_Server==1.5`
+
+*Important* Please download again and reload the setting file!
 
 ## 3. Start the server in the Terminal with:
 
