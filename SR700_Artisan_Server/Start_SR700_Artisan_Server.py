@@ -29,12 +29,14 @@ class Roaster(object):
                 phidget_use_hub=False,
                 phidget_hub_port=0,
                 phidget_hub_channel=0,
+		use_max31865=False,
                 kp=0.4, ki=0.0075, kd=0.9):
 
         """Creates a freshroastsr700 object passing in methods included in this
         class."""
 
         self.use_phidget_temp=use_phidget_temp
+        self.use_max31865=use_max31865
         self.temp_manual_mode=False
         self.fan_manual_mode=False
         self.roaster = SR700Phidget(
@@ -42,6 +44,7 @@ class Roaster(object):
             phidget_use_hub=phidget_use_hub,
             phidget_hub_port=phidget_hub_port,
             phidget_hub_channel=phidget_hub_channel,
+            use_max31865=use_max31865,
             update_data_func=self.update_data,
             state_transition_func=self.next_state,
             thermostat=True,
@@ -74,6 +77,14 @@ class Roaster(object):
                 ( str(cur_state),
                 self.roaster.current_temp,
                 self.roaster.current_temp_phidget,
+                self.roaster.target_temp,
+                self.roaster.fan_speed,
+                self.roaster.time_remaining))
+            elif self.use_max31865:
+                logging.info("[State:%s](Temp SR700:%d)(Temp max31865 %d)(Target temp: %d)(Fan Speed: %d)(Time left: %d)"  % \
+                ( str(cur_state),
+                self.roaster.current_temp,
+                self.roaster.current_temp_max31865,
                 self.roaster.target_temp,
                 self.roaster.fan_speed,
                 self.roaster.time_remaining))
@@ -129,6 +140,7 @@ class Roaster(object):
         return ret_state
 
     def output_sr700_and_phidget_temp(self):
+        raise Exception("Shouldn't be called")
         cur_state = self.roaster.get_roaster_state()
         cur_temp = str(self.roaster.current_temp)
         ret_state = cur_temp + cur_state
@@ -140,6 +152,8 @@ class Roaster(object):
 
         if self.use_phidget_temp:
             bt=self.roaster.current_temp_phidget
+        elif self.use_max31865:
+            bt=self.roaster.current_temp_max31865
         else:
             bt=et #in normal mode we have only the sr700 reading
 
@@ -183,8 +197,8 @@ def main():
         parser = argparse.ArgumentParser(description='Parameters',formatter_class=argparse.ArgumentDefaultsHelpFormatter)
 
         parser.add_argument('--enable_extension', type=str, help='Running mode: phidget_simple,\
-        phidget_hub if not specified no external sensor will be used,',
-        default='simple',choices=['phidget_simple','phidget_hub'] )
+        phidget_hub,max31865 if not specified no external sensor will be used,',
+        default='simple',choices=['phidget_simple','phidget_hub', 'max31865'] )
         parser.add_argument('--phidget_hub_port',  type=int,  default=0)
         parser.add_argument('--phidget_hub_channel',  type=int,  default=0)
         parser.add_argument('--kp',  type=float, default=None)
@@ -197,6 +211,9 @@ def main():
 
         assign_pid_param=lambda v_args,v_default: v_args if v_args else v_default
 
+        use_max31865=False
+        use_phidget_temp=False
+
         if args.enable_extension=='phidget_simple' or args.enable_extension=='phidget_hub':
 
             use_phidget_temp=True
@@ -204,7 +221,12 @@ def main():
             kp=assign_pid_param(args.kp,0.4)
             ki=assign_pid_param(args.ki,0.0075)
             kd=assign_pid_param(args.kd,0.9)
+        elif args.enable_extension=='max31865':
+            use_max31865=True
 
+            kp=assign_pid_param(args.kp,0.4)
+            ki=assign_pid_param(args.ki,0.0075)
+            kd=assign_pid_param(args.kd,0.9)
         else:
             use_phidget_temp=False
 
@@ -255,6 +277,7 @@ def main():
         phidget_use_hub=phidget_use_hub,
         phidget_hub_port=args.phidget_hub_port,
         phidget_hub_channel=args.phidget_hub_channel,
+        use_max31865=use_max31865,
         kp=kp,ki=ki,kd=kd)
 
         r.roaster.log_info=False

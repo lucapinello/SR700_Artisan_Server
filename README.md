@@ -20,7 +20,7 @@ On Windows machine unfortunately you have to use speficially Python 3.5 If you h
 
 `conda install python=3.5`
 
-## 1. Phidget setup (OPTIONAL)
+## 1 Phidget setup (OPTIONAL)
 
 If you have a Phidget temperature sensor, install the Phidget driver for your machine: https://www.phidgets.com/docs/Operating_System_Support
 
@@ -74,6 +74,14 @@ Or like this without a Phidget:
 [State:idle] Temp SR700:150  Target temp: 150 Fan Speed: 1 Time left: 0
 [State:idle] Temp SR700:150  Target temp: 150 Fan Speed: 1 Time left: 0
 ```
+If you use a MAX31865, then start the server with:
+`Start_SR700_Artisan_Server --enable_extension max31865`
+
+You should see something like this with the MAX31865:
+```
+[ [State:idle](Temp SR700:150)(Temp max31865 119)(Target temp: 449)(Fan Speed: 9)(Time left: 649) ]
+```
+
 
 ## 4. Start Artisan
 
