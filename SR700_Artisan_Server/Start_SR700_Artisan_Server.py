@@ -29,7 +29,7 @@ class Roaster(object):
                 phidget_use_hub=False,
                 phidget_hub_port=0,
                 phidget_hub_channel=0,
-		use_max31865=False,
+                use_max31865=False,
                 kp=0.4, ki=0.0075, kd=0.9):
 
         """Creates a freshroastsr700 object passing in methods included in this
