@@ -20,7 +20,7 @@ On Windows machine unfortunately you have to use speficially Python 3.5 If you h
 
 `conda install python=3.5`
 
-## 1 Phidget setup (OPTIONAL)
+## 1. Phidget setup (OPTIONAL)
 
 If you have a Phidget temperature sensor, install the Phidget driver for your machine: https://www.phidgets.com/docs/Operating_System_Support
 
