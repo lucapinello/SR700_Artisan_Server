@@ -2,9 +2,9 @@
 
 Server to use the Freshroast SR700 with Artisan (https://artisan-scope.org/). This server simplifies dramatically the setup and the configuration of Artisan (settings are included).
 
-It also allows to fully automate the roasting with users' profiles that can be easily created with another tool (see the end of the document). 
+It also allows to fully automate the roasting with users' profiles that can be easily created with another tool (see the end of the document).
 
-If available the Phidget Temperature Sensor can be used to improve the roasting and to measure the true beans temperature. 
+If available the Phidget Temperature Sensor can be used to improve the roasting and to measure the true beans temperature.
 
 This work was inspired by the SR700-Artisan-PDServer (https://github.com/infinigrove/SR700-Artisan-PDServer) and freshroastsr700(https://github.com/Roastero/freshroastsr700/tree/master/freshroastsr700).
 
@@ -49,12 +49,12 @@ If you a a Phidget with the hub, start the server with:
 `Start_SR700_Artisan_Server --enable_extension phidget_hub`
 
 Depending on your hub setup you may need to change hub port and channel adding these two flags:
-  
+
   ```
   --phidget_hub_port PHIDGET_HUB_PORT
   --phidget_hub_channel PHIDGET_HUB_CHANNEL
   ```
-  
+
 For example, to use the hub port 0 and the channel 1:
 
 `Start_SR700_Artisan_Server --enable_extension phidget_hub --phidget_hub_port 0  --phidget_hub_channel 1`
@@ -82,6 +82,10 @@ You should see something like this with the MAX31865:
 [ [State:idle](Temp SR700:150)(Temp max31865 119)(Target temp: 449)(Fan Speed: 9)(Time left: 649) ]
 ```
 
+If you need to, you can also specify the GPIO pins used by the MAX31865, e.g.
+`Start_SR700_Artisan_Server --enable_extension max31865 --max_31865_gpio_cs=8 --max_31865_gpio_miso=9 --max_31865_gpio_mosi=10 --max_31865_gpio_clk=11`
+
+See documentation for `freshroastsr700_phidget` for more info.
 
 ## 4. Start Artisan
 
