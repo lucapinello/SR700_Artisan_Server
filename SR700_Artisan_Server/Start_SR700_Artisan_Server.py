@@ -30,6 +30,10 @@ class Roaster(object):
                 phidget_hub_port=0,
                 phidget_hub_channel=0,
                 use_max31865=False,
+                max_31865_gpio_cs=8,
+                max_31865_gpio_miso=9,
+                max_31865_gpio_mosi=10,
+                max_31865_gpio_clk=11,
                 kp=0.4, ki=0.0075, kd=0.9):
 
         """Creates a freshroastsr700 object passing in methods included in this
@@ -41,16 +45,20 @@ class Roaster(object):
         self.fan_manual_mode=False
         self.roaster = SR700Phidget(
 	        use_phidget_temp=use_phidget_temp,
-            phidget_use_hub=phidget_use_hub,
-            phidget_hub_port=phidget_hub_port,
-            phidget_hub_channel=phidget_hub_channel,
-            use_max31865=use_max31865,
-            update_data_func=self.update_data,
-            state_transition_func=self.next_state,
-            thermostat=True,
-            kp=kp,
-            ki=ki,
-            kd=kd)
+                phidget_use_hub=phidget_use_hub,
+                phidget_hub_port=phidget_hub_port,
+                phidget_hub_channel=phidget_hub_channel,
+                use_max31865=use_max31865,
+                max_31865_gpio_cs=max_31865_gpio_cs,
+                max_31865_gpio_miso=max_31865_gpio_miso,
+                max_31865_gpio_mosi=max_31865_gpio_mosi,
+                max_31865_gpio_clk=max_31865_gpio_clk,
+                update_data_func=self.update_data,
+                state_transition_func=self.next_state,
+                thermostat=True,
+                kp=kp,
+                ki=ki,
+                kd=kd)
 
 
     def enable_temp_manual_mode(self):
@@ -204,6 +212,10 @@ def main():
         parser.add_argument('--kp',  type=float, default=None)
         parser.add_argument('--ki',  type=float, default=None)
         parser.add_argument('--kd',  type=float, default=None)
+        parser.add_argument('--max_31865_gpio_cs',  type=int,  default=8)
+        parser.add_argument('--max_31865_gpio_miso',  type=int,  default=9)
+        parser.add_argument('--max_31865_gpio_mosi',  type=int,  default=10)
+        parser.add_argument('--max_31865_gpio_clk',  type=int,  default=11)
 
 
         args = parser.parse_args()
@@ -274,11 +286,15 @@ def main():
         logging.info("Initializing connection with the SR700...")
         # Create a roaster object.
         r = Roaster(use_phidget_temp=use_phidget_temp,
-        phidget_use_hub=phidget_use_hub,
-        phidget_hub_port=args.phidget_hub_port,
-        phidget_hub_channel=args.phidget_hub_channel,
-        use_max31865=use_max31865,
-        kp=kp,ki=ki,kd=kd)
+                    phidget_use_hub=phidget_use_hub,
+                    phidget_hub_port=args.phidget_hub_port,
+                    phidget_hub_channel=args.phidget_hub_channel,
+                    use_max31865=use_max31865,
+                    max_31865_gpio_cs=args.max_31865_gpio_cs,
+                    max_31865_gpio_miso=args.max_31865_gpio_miso,
+                    max_31865_gpio_mosi=args.max_31865_gpio_mosi,
+                    max_31865_gpio_clk=args.max_31865_gpio_clk,
+                    kp=kp,ki=ki,kd=kd)
 
         r.roaster.log_info=False
 
