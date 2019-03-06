@@ -12,6 +12,14 @@ def main():
     roast_control.enable_fan_manual_mode()
     roast_control.set_fan_speed(9)
     roast_control.run_cooling()
+
+    # if the Artisan alarms trigger before detecting manual fan mode, then 
+    # they will reset the fan to a (likely) lower speed.  So, keep 
+    # keep setting fan to recover from race condition.
+    time.sleep(2)
+    roast_control.set_fan_speed(9)
+    time.sleep(2)
+    roast_control.set_fan_speed(9)
     time.sleep(2)
     roast_control.set_fan_speed(9)
 
