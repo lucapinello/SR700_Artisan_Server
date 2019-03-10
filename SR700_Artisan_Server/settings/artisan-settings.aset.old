@@ -1,0 +1,722 @@
+[General]
+AUCLCDmode=0
+AUCbase=212
+AUCbaseFlag=false
+AUCbegin=1
+AUCguideFlag=false
+AUClcdFlag=false
+AUCshowFlag=false
+AUCtarget=640
+AUCtargetFlag=false
+AmbientTempSource=0
+BTBColor=#00007f
+BTBdeltaColor=blue
+BTcurve=true
+BTfunction=abs(x)
+BTlcd=true
+BackgroundAlpha=0.29999999999999999
+ChannelTares=0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+Colors=@Variant(\0\0\0\b\0\0\0\x1d\0\0\0\f\0y\0l\0\x61\0\x62\0\x65\0l\0\0\0\n\0\0\0\b\0\x30\0.\0\x32\0\x30\0\0\0\x4\0x\0t\0\0\0\n\0\0\0\n\0g\0r\0\x65\0\x65\0n\0\0\0\f\0x\0l\0\x61\0\x62\0\x65\0l\0\0\0\n\0\0\0\b\0\x30\0.\0\x32\0\x30\0\0\0\x14\0w\0\x61\0t\0\x65\0r\0m\0\x61\0r\0k\0s\0\0\0\n\0\0\0\f\0y\0\x65\0l\0l\0o\0w\0\0\0\n\0t\0i\0t\0l\0\x65\0\0\0\n\0\0\0\b\0\x30\0.\0\x32\0\x30\0\0\0\x12\0t\0i\0m\0\x65\0g\0u\0i\0\x64\0\x65\0\0\0\n\0\0\0\b\0\x62\0l\0u\0\x65\0\0\0\b\0t\0\x65\0x\0t\0\0\0\n\0\0\0\n\0\x62\0l\0\x61\0\x63\0k\0\0\0 \0s\0p\0\x65\0\x63\0i\0\x61\0l\0\x65\0v\0\x65\0n\0t\0t\0\x65\0x\0t\0\0\0\n\0\0\0\n\0\x62\0l\0\x61\0\x63\0k\0\0\0\x1e\0s\0p\0\x65\0\x63\0i\0\x61\0l\0\x65\0v\0\x65\0n\0t\0\x62\0o\0x\0\0\0\n\0\0\0\f\0y\0\x65\0l\0l\0o\0w\0\0\0\n\0r\0\x65\0\x63\0t\0\x35\0\0\0\n\0\0\0\x12\0l\0i\0g\0h\0t\0g\0r\0\x65\0y\0\0\0\n\0r\0\x65\0\x63\0t\0\x34\0\0\0\n\0\0\0\x12\0l\0i\0g\0h\0t\0\x62\0l\0u\0\x65\0\0\0\n\0r\0\x65\0\x63\0t\0\x33\0\0\0\n\0\0\0\xe\0#\0\x39\0\x39\0\x36\0\x36\0\x33\0\x33\0\0\0\n\0r\0\x65\0\x63\0t\0\x32\0\0\0\n\0\0\0\f\0o\0r\0\x61\0n\0g\0\x65\0\0\0\n\0r\0\x65\0\x63\0t\0\x31\0\0\0\n\0\0\0\n\0g\0r\0\x65\0\x65\0n\0\0\0\xe\0m\0\x65\0t\0t\0\x65\0x\0t\0\0\0\n\0\0\0\n\0w\0h\0i\0t\0\x65\0\0\0\f\0m\0\x65\0t\0\x62\0o\0x\0\0\0\n\0\0\0\x6\0r\0\x65\0\x64\0\0\0\x10\0m\0\x65\0s\0s\0\x61\0g\0\x65\0s\0\0\0\n\0\0\0\n\0\x62\0l\0\x61\0\x63\0k\0\0\0\xe\0m\0\x61\0r\0k\0\x65\0r\0s\0\0\0\n\0\0\0\n\0\x62\0l\0\x61\0\x63\0k\0\0\0\x18\0l\0\x65\0g\0\x65\0n\0\x64\0\x62\0o\0r\0\x64\0\x65\0r\0\0\0\n\0\0\0\x10\0\x64\0\x61\0r\0k\0g\0r\0\x65\0y\0\0\0\x10\0l\0\x65\0g\0\x65\0n\0\x64\0\x62\0g\0\0\0\n\0\0\0\n\0w\0h\0i\0t\0\x65\0\0\0\b\0g\0r\0i\0\x64\0\0\0\n\0\0\0\xe\0#\0\x38\0\x30\0\x38\0\x30\0\x38\0\x30\0\0\0\x4\0\x65\0t\0\0\0\n\0\0\0\x6\0r\0\x65\0\x64\0\0\0\xe\0\x64\0\x65\0l\0t\0\x61\0\x65\0t\0\0\0\n\0\0\0\f\0o\0r\0\x61\0n\0g\0\x65\0\0\0\xe\0\x64\0\x65\0l\0t\0\x61\0\x62\0t\0\0\0\n\0\0\0\b\0\x62\0l\0u\0\x65\0\0\0\f\0\x63\0\x61\0n\0v\0\x61\0s\0\0\0\n\0\0\0\b\0N\0o\0n\0\x65\0\0\0\x4\0\x62\0t\0\0\0\n\0\0\0\xe\0#\0\x30\0\x30\0\x30\0\x30\0\x37\0\x66\0\0\0\x14\0\x62\0\x61\0\x63\0k\0g\0r\0o\0u\0n\0\x64\0\0\0\n\0\0\0\n\0w\0h\0i\0t\0\x65\0\0\0\x10\0\x61\0u\0\x63\0g\0u\0i\0\x64\0\x65\0\0\0\n\0\0\0\xe\0#\0\x30\0\x30\0\x30\0\x30\0\x37\0\x66\0\0\0\xe\0\x61\0u\0\x63\0\x61\0r\0\x65\0\x61\0\0\0\n\0\0\0\xe\0#\0\x37\0\x36\0\x37\0\x36\0\x37\0\x36)
+Delay=3000
+ETBColor=red
+ETBdeltaColor=orange
+ETcurve=true
+ETfunction=abs(x)
+ETlcd=true
+ExtraEventSamplingDelay=0
+Flavors=Acidity, Aftertaste, Clean Cup, Head, Fragrance, Sweetness, Aroma, Balance, Body
+Geometry=@ByteArray(\x1\xd9\xd0\xcb\0\x2\0\0\0\0\0\0\0\0\0\x18\0\0\x3\xff\0\0\x2V\0\0\0\x1\0\0\0\x37\0\0\x3\xfe\0\0\x2%\0\0\0\0\x2\0\0\0\x4\0)
+KeepON=false
+LCDColors=@Variant(\0\0\0\b\0\0\0\x6\0\0\0\n\0t\0i\0m\0\x65\0r\0\0\0\n\0\0\0\n\0\x62\0l\0\x61\0\x63\0k\0\0\0\x4\0s\0v\0\0\0\n\0\0\0\xe\0#\0\x34\0\x30\0\x34\0\x30\0\x34\0\x30\0\0\0\x4\0\x65\0t\0\0\0\n\0\0\0\xe\0#\0\x44\0\x39\0\x44\0\x39\0\x44\0\x39\0\0\0\xe\0\x64\0\x65\0l\0t\0\x61\0\x65\0t\0\0\0\n\0\0\0\xe\0#\0\x42\0\x46\0\x42\0\x46\0\x42\0\x46\0\0\0\xe\0\x64\0\x65\0l\0t\0\x61\0\x62\0t\0\0\0\n\0\0\0\xe\0#\0\x42\0\x46\0\x42\0\x46\0\x42\0\x46\0\0\0\x4\0\x62\0t\0\0\0\n\0\0\0\xe\0#\0\x44\0\x39\0\x44\0\x39\0\x44\0\x39)
+LEDColors=@Variant(\0\0\0\b\0\0\0\x6\0\0\0\n\0t\0i\0m\0\x65\0r\0\0\0\n\0\0\0\n\0w\0h\0i\0t\0\x65\0\0\0\x4\0s\0v\0\0\0\n\0\0\0\f\0y\0\x65\0l\0l\0o\0w\0\0\0\x4\0\x65\0t\0\0\0\n\0\0\0\x6\0r\0\x65\0\x64\0\0\0\xe\0\x64\0\x65\0l\0t\0\x61\0\x65\0t\0\0\0\n\0\0\0\f\0o\0r\0\x61\0n\0g\0\x65\0\0\0\xe\0\x64\0\x65\0l\0t\0\x61\0\x62\0t\0\0\0\n\0\0\0\b\0\x62\0l\0u\0\x65\0\0\0\x4\0\x62\0t\0\0\0\n\0\0\0\xe\0#\0\x30\0\x30\0\x30\0\x30\0\x37\0\x46)
+LargeLCDs=false
+Mode=F
+Oversampling=true
+Phases=200, 315, 390, 450
+Statistics=1, 1, 1, 1, 1, 0
+StatisticsConds=180, 360, 180, 600, 180, 360, 180, 300
+appearance=
+autoDry=true
+autoFCs=false
+autosaveflag=0
+autosavepath=
+autosavepdf=false
+autosaveprefix=
+backgroundPlaybackDROP=false
+backgroundPlaybackEvents=false
+backgroundReproduce=false
+colorsystem=0
+curvefilter=21
+customflavorlabels=Acidity, Aftertaste, Clean Cup, Head, Fragrance, Sweetness, Aroma, Balance, Body
+detectBackgroundEventTime=20
+dpi=120
+dropSpikes=true
+externaloutprogram=
+externaloutprogramFlag=false
+externalprogram=Get_Artisan_Temps
+filterDropOuts=true
+flavorstartangle=90
+fmt_data_RoR=false
+fullscreen=false
+lastLoadedBackground=
+lastLoadedProfile=/home/pine64/ROASTER_SOFTWARE_NEW/lucaraofinal
+maxLimit=1000
+minLimit=50
+minmaxLimits=false
+optimalSmoothing=false
+phasesLCDmode=1
+phasesLCDmode_all=false, false, false
+phasesLCDmode_l=1, 1, 1
+phasesLCDs=true
+phasesbuttonflag=false
+phasesfromBackgroundflag=false
+plotcurvecolor=black, black, black, black, black, black, black, black, black
+plotcurves=, , , , , , , , 
+plus_account=@Invalid()
+plus_email=@Invalid()
+plus_remember_credentials=true
+profilepath=/home/pine64/ROASTER_SOFTWARE_NEW/
+recentRoasts=@Invalid()
+replayType=0
+resetqsettings=0
+roastpropertiesAutoOpenFlag=0
+roastpropertiesflag=1
+settingspath=
+sound=0
+swapETBT=false
+swaplcds=false
+titleshowalways=false
+watermarks=true
+wheelpath=
+
+[Alarms]
+alarm_popup_timout=10
+alarmaction=16, 6, 4, 6, 4, 6, 4, 6, 4, 6, 4, 6, 4, 6, 4, 6, 4, 6, 4, 6, 4, 6, 4, 6, 4, 6, 4, 6, 4, 6, 4, 6, 4, 6, 4, 6, 4, 6, 4, 6, 4, 6, 4, 6, 4, 6, 4, 6, 4, 6, 4, 6, 4, 6, 4, 6, 4, 6, 4, 6, 4, 6, 4, 6, 4, 6, 4, 6, 4, 6, 4, 6, 4, 13, 14, 15, -1, -1
+alarmbeep=0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+alarmcond=1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1
+alarmflag=1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1
+alarmguard=-1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1
+alarmnegguard=-1, 76, 77, 76, 77, 76, 77, 76, 77, 76, 77, 76, 77, 76, 77, 76, 77, 76, 77, 76, 77, 76, 77, 76, 77, 76, 77, 76, 77, 76, 77, 76, 77, 76, 77, 76, 77, 76, 77, 76, 77, 76, 77, 76, 77, 76, 77, 76, 77, 76, 77, 76, 77, 76, 77, 76, 77, 76, 77, 76, 77, 76, 77, 76, 77, 76, 77, 76, 77, 76, 77, 76, 77, -1, -1, -1, -1, -1
+alarmoffset=29, 30, 30, 50, 50, 70, 70, 90, 90, 110, 110, 130, 130, 150, 150, 170, 170, 190, 190, 210, 210, 230, 230, 250, 250, 270, 270, 290, 290, 310, 310, 330, 330, 350, 350, 370, 370, 390, 390, 410, 410, 430, 430, 450, 450, 470, 470, 490, 490, 510, 510, 530, 530, 550, 550, 570, 570, 590, 590, 610, 610, 630, 630, 650, 650, 670, 670, 690, 690, 710, 710, 730, 730, 731, 911, 915, 0, 0
+alarmsfile=/home/pine64/ROASTER_SOFTWARE_NEW/rao_luca_tweak_log_final.alrm
+alarmsource=1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 3
+alarmstrings=charge, 120, 90, 120, 90, 124, 90, 161, 90, 191, 90, 215, 80, 235, 70, 254, 70, 270, 60, 285, 50, 298, 50, 310, 40, 322, 40, 333, 40, 343, 30, 352, 30, 361, 30, 369, 20, 376, 20, 382, 20, 389, 20, 395, 20, 401, 20, 406, 20, 412, 20, 417, 20, 421, 20, 426, 20, 430, 20, 434, 20, 437, 20, 441, 20, 444, 20, 447, 20, 449, 20, 451, 20, drop, cool end, off, temp Manual, fan manual
+alarmtablecolumnwidths=28, 52, 143, 143, 88, 143, 55, 75, 62, 94, 41, 337
+alarmtemperature=500, 500, 500, 500, 500, 500, 500, 500, 500, 500, 500, 500, 500, 500, 500, 500, 500, 500, 500, 500, 500, 500, 500, 500, 500, 500, 500, 500, 500, 500, 500, 500, 500, 500, 500, 500, 500, 500, 500, 500, 500, 500, 500, 500, 500, 500, 500, 500, 500, 500, 500, 500, 500, 500, 500, 500, 500, 500, 500, 500, 500, 500, 500, 500, 500, 500, 500, 500, 500, 500, 500, 500, 500, 500, 500, 500, 0.5, 0.5
+alarmtime=-1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1
+loadAlarmsFromBackground=false
+loadAlarmsFromProfile=false
+
+[ArduinoPID]
+dutyMax=100
+dutyMin=-100
+dutySteps=1
+invertControl=false
+loadRampSoakFromProfile=false
+pOnE=true
+pidCycle=1000
+pidKd=3
+pidKi=0.01
+pidKp=20
+pidNegativeTarget=0
+pidOnCHARGE=false
+pidPositiveTarget=0
+pidSource=1
+svButtons=false
+svLookahead=0
+svMode=0
+svRamps=0, 0, 0, 0, 0, 0, 0, 0
+svSlider=false
+svSliderMax=0
+svSliderMin=0
+svSoaks=0, 0, 0, 0, 0, 0, 0, 0
+svValue=0
+svValues=0, 0, 0, 0, 0, 0, 0, 0
+
+[Axis]
+autotimex=true
+chargemintime=-30
+legendloc=4
+lockmax=false
+locktimex=false
+locktimex_end=784
+locktimex_start=-60
+resetmaxtime=600
+xmax=784.29892373649636
+xmin=-18.297660560463555
+ymax=500
+ymin=0
+zmax=50
+zmin=0
+
+[Batch]
+batchcounter=-1
+batchprefix=
+batchsequence=1
+lastroastepoch=1550980696
+
+[Color]
+baudrate=115200
+bytesize=8
+comport=/dev/cu.usbserial-FTFKDA5O
+device=None
+parity=N
+stopbits=1
+timeout=2
+
+[CurveStyles]
+BTBdeltadrawstyle=default
+BTBdeltalinestyle=-
+BTBdeltalinewidth=2
+BTBdeltamarker=None
+BTBdeltamarkersize=6
+BTbackdrawstyle=default
+BTbacklinestyle=-
+BTbacklinewidth=2
+BTbackmarker=None
+BTbackmarkersize=6
+BTdeltadrawstyle=default
+BTdeltalinestyle=-
+BTdeltalinewidth=1
+BTdeltamarker=None
+BTdeltamarkersize=6
+BTdrawstyle=default
+BTlinestyle=-
+BTlinewidth=2
+BTmarker=None
+BTmarkersize=6
+ETBdeltadrawstyle=default
+ETBdeltalinestyle=-
+ETBdeltalinewidth=2
+ETBdeltamarker=None
+ETBdeltamarkersize=6
+ETbackdrawstyle=default
+ETbacklinestyle=-
+ETbacklinewidth=2
+ETbackmarker=None
+ETbackmarkersize=6
+ETdeltadrawstyle=default
+ETdeltalinestyle=-
+ETdeltalinewidth=1
+ETdeltamarker=None
+ETdeltamarkersize=6
+ETdrawstyle=default
+ETlinestyle=-
+ETlinewidth=2
+ETmarker=None
+ETmarkersize=6
+XTbackdrawstyle=default
+XTbacklinestyle=-
+XTbacklinewidth=1
+XTbackmarker=None
+XTbackmarkersize=6
+devicetablecolumnwidths=104, 104, 104, 104, 104, 104, 104, 47, 68, 52, 56
+extradrawstyles1=@Variant(\0\0\0\t\0\0\0\x1\0\0\0\n\0\0\0\xe\0\x64\0\x65\0\x66\0\x61\0u\0l\0t)
+extradrawstyles2=@Variant(\0\0\0\t\0\0\0\x1\0\0\0\n\0\0\0\xe\0\x64\0\x65\0\x66\0\x61\0u\0l\0t)
+extralinestyles1=@Variant(\0\0\0\t\0\0\0\x1\0\0\0\n\0\0\0\x2\0-)
+extralinestyles2=@Variant(\0\0\0\t\0\0\0\x1\0\0\0\n\0\0\0\x2\0-)
+extralinewidths1=@Variant(\0\0\0\t\0\0\0\x1\0\0\0\x6?\xf0\0\0\0\0\0\0)
+extralinewidths2=@Variant(\0\0\0\t\0\0\0\x1\0\0\0\x6?\xf0\0\0\0\0\0\0)
+extramarkers1=@Variant(\0\0\0\t\0\0\0\x1\0\0\0\n\0\0\0\b\0N\0o\0n\0\x65)
+extramarkers2=@Variant(\0\0\0\t\0\0\0\x1\0\0\0\n\0\0\0\b\0N\0o\0n\0\x65)
+extramarkersizes1=@Variant(\0\0\0\t\0\0\0\x1\0\0\0\x6@\x18\0\0\0\0\0\0)
+extramarkersizes2=@Variant(\0\0\0\t\0\0\0\x1\0\0\0\x6@\x18\0\0\0\0\0\0)
+
+[DefaultButtons]
+buttonactions=0, 0, 0, 0, 0, 0, 2, 2
+buttonactionstrings=, , , , , , Roaster_Cooling, Roaster_Stop
+buttonvisibility=true, true, true, true, true, false, true, true
+extrabuttonactions=0, 2, 0
+extrabuttonactionstrings=, Roaster_Stop, 
+xextrabuttonactions=0, 2
+xextrabuttonactionstrings=, Roaster_Preheat
+
+[Device]
+ArduinoFILT=70, 70, 70, 70
+Controlbuttonflag=false
+PIDbuttonflag=true
+ambient_humidity_device=0
+ambient_pressure_device=0
+ambient_temperature_device=0
+arduinoATChannel=None
+arduinoBTChannel=2
+arduinoETChannel=1
+controlETpid=0, 1
+elevation=0
+id=27
+phidget1018_async=false, false, false, false, false, false, false, false
+phidget1018_changeTriggers=10, 10, 10, 10, 10, 10, 10, 10
+phidget1018_dataRates=256, 256, 256, 256, 256, 256, 256, 256
+phidget1018_ratio=false, false, false, false, false, false, false, false
+phidget1045_async=false
+phidget1045_changeTrigger=0.20000000000000001
+phidget1045_dataRate=256
+phidget1045_emissivity=1
+phidget1046_async=false, false, false, false
+phidget1046_dataRate=256
+phidget1046_formula=1, 1, 1, 1
+phidget1046_gain=1, 1, 1, 1
+phidget1048_async=false, false, false, false
+phidget1048_changeTriggers=0.20000000000000001, 0.20000000000000001, 0.20000000000000001, 0.20000000000000001
+phidget1048_dataRate=256
+phidget1048_types=1, 1, 1, 1
+phidget1200_async=false
+phidget1200_changeTrigger=0.20000000000000001
+phidget1200_dataRate=250
+phidget1200_formula=0
+phidget1200_wire=0
+phidgetPassword=
+phidgetPort=5661
+phidgetRemoteFlag=false
+phidgetRemoteOnlyFlag=false
+phidgetServerID=
+readBTpid=1, 2
+showFujiLCDs=true
+useModbusPort=false
+yoctoRemoteFlag=false
+yoctoServerID=127.0.0.1
+
+[ExtraComm]
+extrabaudrate=@Variant(\0\0\0\t\0\0\0\x1\0\0\0\x2\0\0%\x80)
+extrabytesize=@Variant(\0\0\0\t\0\0\0\x1\0\0\0\x2\0\0\0\b)
+extracomport=@Variant(\0\0\0\t\0\0\0\x1\0\0\0\n\0\0\0\b\0\x43\0O\0M\0\x31)
+extraparity=@Variant(\0\0\0\t\0\0\0\x1\0\0\0\n\0\0\0\x2\0N)
+extrastopbits=@Variant(\0\0\0\t\0\0\0\x1\0\0\0\x2\0\0\0\x1)
+extratimeout=@Variant(\0\0\0\t\0\0\0\x1\0\0\0\x6?\xf0\0\0\0\0\0\0)
+
+[ExtraDev]
+extraCurveVisibility1=false, true, true, true, true, true, true, true, true, true
+extraCurveVisibility2=false, true, true, true, true, true, true, true, true, true
+extraLCDvisibility1=true, false, false, false, false, false, false, false, false, false
+extraLCDvisibility2=true, false, false, false, false, false, false, false, false, false
+extradevicecolor1=@Variant(\0\0\0\t\0\0\0\x1\0\0\0\n\0\0\0\n\0\x62\0l\0\x61\0\x63\0k)
+extradevicecolor2=@Variant(\0\0\0\t\0\0\0\x1\0\0\0\n\0\0\0\n\0\x62\0l\0\x61\0\x63\0k)
+extradevices=@Variant(\0\0\0\t\0\0\0\x1\0\0\0\x2\0\0\0\x19)
+extramathexpression1="@Variant(\0\0\0\t\0\0\0\x1\0\0\0\n\0\0\0\x32\0m\0\x61\0x\0(\0 \0(\0\x61\0\x62\0s\0(\0Y\0\x31\0)\0/\0Y\0\x31\0)\0*\0-\0\x31\0.\0\x30\0,\0\x30\0))"
+extramathexpression2="@Variant(\0\0\0\t\0\0\0\x1\0\0\0\n\0\0\0\x32\0m\0\x61\0x\0(\0 \0(\0\x61\0\x62\0s\0(\0Y\0\x32\0)\0/\0Y\0\x32\0)\0*\0-\0\x31\0.\0\x30\0,\0\x30\0))"
+extraname1=@Variant(\0\0\0\t\0\0\0\x1\0\0\0\n\0\0\0 \0T\0\x65\0m\0p\0 \0M\0\x61\0n\0u\0\x61\0l\0 \0M\0o\0\x64\0\x65)
+extraname2=@Variant(\0\0\0\t\0\0\0\x1\0\0\0\n\0\0\0\x1e\0\x46\0\x61\0n\0 \0M\0\x61\0n\0u\0\x61\0l\0 \0M\0o\0\x64\0\x65)
+
+[ExtraEventButtons]
+buttonlistmaxlen=11
+buttonpalette="@Variant(\0\0\0\t\0\0\0\x18\0\0\0\t\0\0\0\x5\0\0\0\x2\0\0\0\x4\0\0\0\x2\0\0\0\x4\0\0\0\x2\0\0\0\x4\0\0\0\x2\0\0\0\x4\0\0\0\x2\0\0\0\x4\0\0\0\t\0\0\0\x5\0\0\0\x6?\xf0\0\0\0\0\0\0\0\0\0\x6?\xf0\0\0\0\0\0\0\0\0\0\x6?\xf0\0\0\0\0\0\0\0\0\0\x6?\xf0\0\0\0\0\0\0\0\0\0\x6?\xf0\0\0\0\0\0\0\0\0\0\t\0\0\0\x5\0\0\0\x2\0\0\0\x2\0\0\0\x2\0\0\0\x2\0\0\0\x2\0\0\0\x2\0\0\0\x2\0\0\0\x2\0\0\0\x2\0\0\0\x2\0\0\0\t\0\0\0\x5\0\0\0\x2\0\0\0\x1\0\0\0\x2\0\0\0\x1\0\0\0\x2\0\0\0\x1\0\0\0\x2\0\0\0\x1\0\0\0\x2\0\0\0\x1\0\0\0\t\0\0\0\x5\0\0\0\n\0\0\0\x1e\0R\0o\0\x61\0s\0t\0\x65\0r\0_\0P\0r\0\x65\0h\0\x65\0\x61\0t\0\0\0\n\0\0\0\x1e\0R\0o\0\x61\0s\0t\0\x65\0r\0_\0\x43\0o\0o\0l\0i\0n\0g\0\0\0\n\0\0\0\x18\0R\0o\0\x61\0s\0t\0\x65\0r\0_\0S\0t\0o\0p\0\0\0\n\0\0\0>\0R\0o\0\x61\0s\0t\0\x65\0r\0_\0\x45\0n\0\x61\0\x62\0l\0\x65\0_\0T\0\x65\0m\0p\0_\0M\0\x61\0n\0u\0\x61\0l\0_\0M\0o\0\x64\0\x65\0\0\0\n\0\0\0<\0R\0o\0\x61\0s\0t\0\x65\0r\0_\0\x45\0n\0\x61\0\x62\0l\0\x65\0_\0\x46\0\x61\0n\0_\0M\0\x61\0n\0u\0\x61\0l\0_\0M\0o\0\x64\0\x65\0\0\0\t\0\0\0\x5\0\0\0\n\0\0\0\"\0P\0r\0\x65\0h\0\x65\0\x61\0t\0 \0\x61\0n\0\x64\0 \0S\0t\0\x61\0r\0t\0\0\0\n\0\0\0\b\0\x43\0o\0o\0l\0\0\0\n\0\0\0\b\0S\0t\0o\0p\0\0\0\n\0\0\0 \0T\0\x65\0m\0p\0 \0M\0\x61\0n\0u\0\x61\0l\0 \0M\0o\0\x64\0\x65\0\0\0\n\0\0\0\x1e\0\x46\0\x61\0n\0 \0M\0\x61\0n\0u\0\x61\0l\0 \0M\0o\0\x64\0\x65\0\0\0\t\0\0\0\x5\0\0\0\n\0\0\0\0\0\0\0\n\0\0\0\0\0\0\0\n\0\0\0\0\0\0\0\n\0\0\0\0\0\0\0\n\0\0\0\0\0\0\0\t\0\0\0\x5\0\0\0\n\0\0\0\xe\0#\0\x66\0\x64\0\x38\0\x30\0\x30\0\x38\0\0\0\n\0\0\0\xe\0#\0\x30\0\x66\0\x38\0\x30\0\x66\0\x66\0\0\0\n\0\0\0\xe\0#\0\x63\0\x63\0\x63\0\x63\0\x63\0\x63\0\0\0\n\0\0\0\xe\0#\0\x66\0\x64\0\x36\0\x36\0\x36\0\x36\0\0\0\n\0\0\0\xe\0#\0\x36\0\x36\0\x66\0\x66\0\x66\0\x66\0\0\0\t\0\0\0\x5\0\0\0\n\0\0\0\n\0\x62\0l\0\x61\0\x63\0k\0\0\0\n\0\0\0\n\0\x62\0l\0\x61\0\x63\0k\0\0\0\n\0\0\0\n\0\x62\0l\0\x61\0\x63\0k\0\0\0\n\0\0\0\n\0\x62\0l\0\x61\0\x63\0k\0\0\0\n\0\0\0\n\0\x62\0l\0\x61\0\x63\0k\0\0\0\t\0\0\0\x4\0\0\0\x2\0\0\0\0\0\0\0\x2\0\0\0\x1\0\0\0\x2\0\0\0\0\0\0\0\x2\0\0\0\x1\0\0\0\t\0\0\0\x4\0\0\0\x2\0\0\0\x4\0\0\0\x2\0\0\0\x4\0\0\0\x2\0\0\0\0\0\0\0\x2\0\0\0\x4\0\0\0\t\0\0\0\x4\0\0\0\n\0\0\0&\0R\0o\0\x61\0s\0t\0\x65\0r\0_\0S\0\x65\0t\0_\0T\0i\0m\0\x65\0 \0{\0}\0\0\0\n\0\0\0$\0R\0o\0\x61\0s\0t\0\x65\0r\0_\0S\0\x65\0t\0_\0\x46\0\x61\0n\0 \0{\0}\0\0\0\n\0\0\0\0\0\0\0\n\0\0\0&\0R\0o\0\x61\0s\0t\0\x65\0r\0_\0S\0\x65\0t\0_\0T\0\x65\0m\0p\0 \0{\0}\0\0\0\t\0\0\0\x4\0\0\0\x2\0\0\0\0\0\0\0\x2\0\0\0\0\0\0\0\x2\0\0\0\0\0\0\0\x2\0\0\0\0\0\0\0\t\0\0\0\x4\0\0\0\x6?\xf0\0\0\0\0\0\0\0\0\0\x6?\xb9\x99\x99\x99\x99\x99\x9a\0\0\0\x6?\xf0\0\0\0\0\0\0\0\0\0\x6?\xf0\0\0\0\0\0\0\0\0\0\t\0\0\0\x4\0\0\0\x2\0\0\0\0\0\0\0\x2\0\0\0\0\0\0\0\x2\0\0\0\0\0\0\0\x2\0\0\0\0\0\0\0\t\0\0\0\x4\0\0\0\x2\0\0\0\x1\0\0\0\x2\0\0\0\x1\0\0\0\x2\0\0\0\0\0\0\0\x2\0\0\0\x1\0\0\0\t\0\0\0\x4\0\0\0\x2\0\0\0\0\0\0\0\x2\0\0\0\x1\0\0\0\x2\0\0\0\0\0\0\0\x2\0\0\0<\0\0\0\t\0\0\0\x4\0\0\0\x2\0\0\0\x64\0\0\0\x2\0\0\0\t\0\0\0\x2\0\0\0\x64\0\0\0\x2\0\0\x2&\0\0\0\t\0\0\0\x4\0\0\0\x2\0\0\0\0\0\0\0\x2\0\0\0\0\0\0\0\x2\0\0\0\0\0\0\0\x2\0\0\0\0\0\0\0\t\0\0\0\x4\0\0\0\x2\0\0\0\0\0\0\0\x2\0\0\0\n\0\0\0\x2\0\0\0\0\0\0\0\x2\0\0\0x\0\0\0\t\0\0\0\x4\0\0\0\x2\0\0\x1,\0\0\0\x2\0\0\0Z\0\0\0\x2\0\0\0\x64\0\0\0\x2\0\0\x2&\0\0\0\t\0\0\0\x4\0\0\0\x2\0\0\0\x1\0\0\0\x2\0\0\0\x1\0\0\0\x2\0\0\0\0\0\0\0\x2\0\0\0\0\0\0\0\t\0\0\0\x4\0\0\0\x2\0\0\0\0\0\0\0\x2\0\0\0\0\0\0\0\x2\0\0\0\0\0\0\0\x2\0\0\0\x1\0\0\0\t\0\0\0\x4\0\0\0\n\0\0\0\0\0\0\0\n\0\0\0\0\0\0\0\n\0\0\0\0\0\0\0\n\0\0\0\0)", @Variant(\0\0\0\t\0\0\0\0), @Variant(\0\0\0\t\0\0\0\0), @Variant(\0\0\0\t\0\0\0\0), @Variant(\0\0\0\t\0\0\0\0), @Variant(\0\0\0\t\0\0\0\0), @Variant(\0\0\0\t\0\0\0\0), @Variant(\0\0\0\t\0\0\0\0), @Variant(\0\0\0\t\0\0\0\0), @Variant(\0\0\0\t\0\0\0\0)
+buttonpalette_shortcuts=true
+buttonpalettemaxlen=11, 14, 14, 14, 14, 14, 14, 14, 14, 14
+eventbuttontablecolumnwidths=70, 80, 100, 50, 150, 100, 80, 80, 80, 115
+extraeventbuttoncolor=#fd8008, #0f80ff, #cccccc, #fd6666, #66ffff
+extraeventbuttontextcolor=black, black, black, black, black
+extraeventsactions=2, 2, 2, 2, 2
+extraeventsactionstrings=Roaster_Preheat, Roaster_Cooling, Roaster_Stop, Roaster_Enable_Temp_Manual_Mode, Roaster_Enable_Fan_Manual_Mode
+extraeventsbuttonsflags=1, 1, 1
+extraeventsdescriptions=, , , , 
+extraeventslabels=Preheat and Start, Cool, Stop, Temp Manual Mode, Fan Manual Mode
+extraeventstypes=4, 4, 4, 4, 4
+extraeventsvalues=1, 1, 1, 1, 1
+extraeventsvisibility=1, 1, 1, 1, 1
+
+[ExtrasMoreInfo]
+showmet=false
+showtimeguide=true
+statssummary=false
+
+[HUD]
+BT2target=250
+BTtarget=199
+ET2target=351
+ETtarget=300
+Mode=0
+Projection=false
+ProjectionMode=0
+buttonFlag=false
+hudETpid=5, 240, 60
+
+[Modbus]
+PID_OFF_action=
+PID_ON_action=
+PID_SV_register=0
+PID_d_register=0
+PID_i_register=0
+PID_p_register=0
+PID_slave_ID=0
+PIDmultiplier=0
+SVmultiplier=0
+baudrate=115200
+bytesize=8
+comport=COM5
+host=127.0.0.1
+input1bcd=false
+input1code=3
+input1div=0
+input1float=false
+input1mode=C
+input1register=0
+input1slave=0
+input2bcd=false
+input2code=3
+input2div=0
+input2float=false
+input2mode=C
+input2register=0
+input2slave=0
+input3bcd=false
+input3code=3
+input3div=0
+input3float=false
+input3mode=C
+input3register=0
+input3slave=0
+input4bcd=false
+input4code=3
+input4div=0
+input4float=false
+input4mode=C
+input4register=0
+input4slave=0
+input5bcd=false
+input5code=3
+input5div=0
+input5float=false
+input5mode=C
+input5register=0
+input5slave=0
+input6bcd=false
+input6code=3
+input6div=0
+input6float=false
+input6mode=C
+input6register=0
+input6slave=0
+littleEndianFloats=false
+parity=N
+port=502
+stopbits=1
+timeout=1
+type=0
+wordorderLittle=true
+
+[PXG4]
+alarm%3F=31007
+autotuning=0
+controlmethod=0
+d=60
+d1=60
+d2=60
+d3=60
+d4=60
+d5=60
+d6=60
+d7=60
+decimalposition=1
+fault%3F=31008
+followBackground=false
+i=240
+i1=240
+i2=240
+i3=240
+i4=240
+i5=240
+i6=240
+i7=240
+lookahead=0
+manual=0
+mv1=0
+p=5
+p1=5
+p2=5
+p3=5
+p4=5
+p5=5
+p6=5
+p7=5
+pv%3F=0
+pvinputlowerlimit=0
+pvinputtype=3
+pvinputupperlimit=9999
+rampslopeunit=1
+rampsoak=0
+rampsoakmode=0
+rampsoakpattern=6
+runstandby=0
+segment10ramp=180
+segment10soak=0
+segment10sv=550
+segment11ramp=180
+segment11soak=0
+segment11sv=560
+segment12ramp=180
+segment12soak=0
+segment12sv=560
+segment13ramp=180
+segment13soak=0
+segment13sv=570
+segment14ramp=180
+segment14soak=0
+segment14sv=570
+segment15ramp=180
+segment15soak=0
+segment15sv=580
+segment16ramp=180
+segment16soak=0
+segment16sv=580
+segment1ramp=180
+segment1soak=0
+segment1sv=270
+segment2ramp=180
+segment2soak=0
+segment2sv=300
+segment3ramp=180
+segment3soak=0
+segment3sv=350
+segment4ramp=180
+segment4soak=0
+segment4sv=400
+segment5ramp=180
+segment5soak=0
+segment5sv=530
+segment6ramp=180
+segment6soak=0
+segment6sv=530
+segment7ramp=180
+segment7soak=0
+segment7sv=540
+segment8ramp=180
+segment8soak=0
+segment8sv=540
+segment9ramp=180
+segment9soak=0
+segment9sv=550
+selectedpid=7
+selectpid=0
+selectsv=1
+stat=41561
+stat%3F=31041
+sv1=300
+sv2=350
+sv3=400
+sv4=450
+sv5=500
+sv6=550
+sv7=575
+sv%3F=0
+timeunits=1
+unitdisplay=1
+
+[PXR]
+autotuning=0
+controlmethod=0
+d=60
+decimalposition=1
+i=240
+mv1=0
+p=5
+pv%3F=0
+pvinputtype=3
+rampsoak=0
+rampsoakmode=0
+rampsoakpattern=0
+runstandby=0
+segment1ramp=3
+segment1soak=0
+segment1sv=100
+segment2ramp=3
+segment2soak=0
+segment2sv=100
+segment3ramp=3
+segment3soak=0
+segment3sv=100
+segment4ramp=3
+segment4soak=0
+segment4sv=100
+segment5ramp=3
+segment5soak=0
+segment5sv=100
+segment6ramp=3
+segment6soak=0
+segment6sv=100
+segment7ramp=3
+segment7soak=0
+segment7sv=100
+segment8ramp=3
+segment8soak=0
+segment8sv=100
+segment%3F=0
+sv0=0
+sv%3F=0
+svlowerlimit=0
+svupperlimit=0
+
+[Quantifiers]
+clusterEventsFlag=false
+quantifieractive=0, 0, 0, 0
+quantifiercoarse=0, 0, 0, 0
+quantifiermax=100, 9, 100, 550
+quantifiermin=0, 1, 0, 60
+quantifiersource=1, 1, 0, 1
+
+[RoC]
+DeltaBT=true
+DeltaBTlcd=true
+DeltaET=false
+DeltaETlcd=false
+DeltaSpan=5
+LCDdecimalplaces=1
+deltafilter=11
+statisticsmode=1
+
+[RoRlimits]
+RoRlimit=50
+RoRlimitFlag=false
+RoRlimitm=-95
+
+[RoastProperties]
+beansize=0
+beansize_max=0
+beansize_min=0
+densitySampleVolume=0
+drumspeed=
+machinesetup=
+operator=
+plus_default_store=None
+roastertype=
+
+[S7]
+PID_OFF_action=
+PID_ON_action=
+PID_SV_register=0
+PID_area=0
+PID_d_register=0
+PID_db_nr=0
+PID_i_register=0
+PID_p_register=0
+PIDmultiplier=0
+SVmultiplier=0
+area=0, 0, 0, 0, 0, 0, 0, 0
+db_nr=1, 1, 1, 1, 1, 1, 1, 1
+div=0, 0, 0, 0, 0, 0, 0, 0
+host=127.0.0.1
+mode=0, 0, 0, 0, 0, 0, 0, 0
+port=102
+rack=0
+slot=0
+start=0, 0, 0, 0, 0, 0, 0, 0
+type=0, 0, 0, 0, 0, 0, 0, 0
+
+[Scale]
+baudrate=19200
+bytesize=8
+comport=/dev/cu.usbserial-FTFKDA5O
+device=None
+parity=N
+stopbits=1
+timeout=1
+
+[SerialPort]
+baudrate=9600
+bytesize=8
+comport=COM4
+parity=O
+stopbits=1
+timeout=1
+
+[Sliders]
+ModeTempSliders=F
+eventslidercoarse=1, 1, 0, 0
+eventslidersflags=1, 1, 1
+eventslidertemp=0, 0, 0, 1
+eventsliderunits=, , , 
+slideractions=4, 4, 0, 4
+slidercommands=Roaster_Set_Time {}, Roaster_Set_Fan {}, , Roaster_Set_Temp {}
+sliderfactors=1, 0.10000000000000001, 1, 1
+slidermax=300, 90, 100, 550
+slidermin=0, 10, 0, 120
+slideroffsets=0, 0, 0, 0
+slidervisibilities=0, 1, 0, 1
+
+[Sound]
+Beep=0
+
+[Style]
+graphfont=0
+graphstyle=0
+patheffects=2
+
+[System]
+artisan_build=0
+artisan_os=
+artisan_os_version=
+artisan_revision=0
+artisan_version=1.6.0
+
+[Tare]
+idx=-1
+names=@Invalid()
+weights=@Invalid()
+
+[Units]
+densityvolume=l
+densityweight=g
+volume=l
+volumeCalcUnit=0
+weight=g
+
+[WebLCDs]
+active=false
+alerts=false
+port=8080
+
+[XT]
+color=green
+index=0
+
+[background]
+BTBflag=true
+DeltaBTB=true
+DeltaETB=false
+ETBflag=true
+alignEvent=0
+backgrounddetails=true
+backgroundevents=true
+movespeed=30
+
+[deltaDTA]
+controlmethod=0
+controlsetting=1
+d=60
+duty=0
+error=0
+i=240
+p=5
+pv=0
+sensortype=0
+sv=100
+units=1
+
+[events]
+EvalueColor=#4895CE, #49B160, #800080, #910113
+EvalueMarker=o, s, h, x
+EvalueMarkerSize=4, 4, 4, 4
+EvalueTextColor=white, white, white, white
+Evaluealpha=0.80000000000000004, 0.80000000000000004, 0.80000000000000004, 0.80000000000000004
+Evaluelinethickness=1, 1, 1, 1
+annotationsflag=1
+autoCharge=false
+autoDrop=false
+clampEvents=true
+etypes=Time, Fan, Damper, Temp, --
+eventsGraphflag=2
+eventsbuttonflag=1
+eventslabelschars=6
+eventsshowflag=1
+markTP=true
+minieventsflag=0
+renderEventsDescr=true
+showEtypes=false, true, false, true, true
+showeventsonbt=false
+
+[grid]
+gridalpha=0.29999999999999999
+gridlinestyle=3
+gridthickness=1
+xgrid=60
+ygrid=50
+zgrid=10
