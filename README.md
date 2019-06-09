@@ -12,7 +12,7 @@ This work was inspired by the SR700-Artisan-PDServer (https://github.com/infinig
 
 Python >=2.7
 
-You can use the Python installed with your system, but I strongly suggest to install and use the Anaconda Python 3.7 freely available from here:
+You can use the Python installed with your system, but I strongly suggest to install and use the Anaconda or Miniconda Python 3.7 freely available from here:
 
 http://anaconda.com/download
 
@@ -22,10 +22,30 @@ Open the Anaconda Prompt (not the powershell or window cmd!), a terminal will sh
 
 In the terminal window type:
 
-
 `conda create -n artisan -python=3.5 -y`
 
-Activate the environment with:
+
+## 1. Phidget setup (OPTIONAL)
+
+If you have a Phidget temperature sensor, install the Phidget driver for your machine: https://www.phidgets.com/docs/Operating_System_Support
+
+## 2. Install this Server with:
+
+### OSX or Linux:
+
+Open a terminal or the Terminal app (osx) and type this command:
+
+`pip install SR700_Artisan_Server`
+
+To update from an old version type:
+
+`pip install SR700_Artisan_Server==1.6`
+
+### Windows:
+
+On a Window machine the procedure is slightly different.
+
+Open the Anaconda Prompt and activate the environment you have created before with:
 
 `activate artisan`
 
@@ -39,7 +59,6 @@ This will show where the path of the server and the other scripts, in my machine
 
 Add the first part to your PATH variable i.e.:
 
-
 `C:\Users\Luca\Miniconda3\envs\artisan\Scripts`
 
 If you don't know how to do that, check this illustrated guide: 
@@ -47,20 +66,6 @@ https://helpdeskgeek.com/windows-10/add-windows-path-environment-variable/
 
 Close the window.
 
-
-## 1. Phidget setup (OPTIONAL)
-
-If you have a Phidget temperature sensor, install the Phidget driver for your machine: https://www.phidgets.com/docs/Operating_System_Support
-
-## 2. Install this Server with:
-
-Open a terminal (for example the Anaconda Prompt) or the Terminal app (osx) and type this command:
-
-`pip install SR700_Artisan_Server`
-
-To update from an old version type:
-
-`pip install SR700_Artisan_Server==1.6`
 
 *Important* Please download again and reload the setting file!
 
