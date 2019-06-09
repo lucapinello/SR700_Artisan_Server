@@ -67,7 +67,7 @@ https://helpdeskgeek.com/windows-10/add-windows-path-environment-variable/
 Close the window.
 
 
-*Important* Please download again and reload the setting file!
+*Important* If you are updating the server from an old version (<1.6) please download again and reload the setting file!
 
 ## 3. Start the server in the Terminal with:
 
