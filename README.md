@@ -16,9 +16,37 @@ You can use the Python installed with your system, but I strongly suggest to ins
 
 http://anaconda.com/download
 
-On Windows machine unfortunately you have to use speficially Python 3.5 If you have Anaconda install you can do this with:
+On Windows machine unfortunately you have to use speficially Python 3.5  and change the PATH variable
 
-`conda install python=3.5`
+Open the Anaconda Prompt (not the powershell or window cmd!), a terminal will show up.
+
+In the terminal window type:
+
+
+`conda create -n artisan -python=3.5 -y`
+
+Activate the environment with:
+
+`activate artisan`
+
+Check where you have the scripts with:
+
+`where Start_SR700_Artisan_Server`
+
+This will show where the path of the server and the other scripts, in my machine this returns:
+
+`C:\Users\Luca\Miniconda3\envs\artisan\Scripts\Start_SR700_Artisan_Server.exe`
+
+Add the first part to your PATH variable i.e.:
+
+
+`C:\Users\Luca\Miniconda3\envs\artisan\Scripts`
+
+If you don't know how to do that, check this illustrated guide: 
+https://helpdeskgeek.com/windows-10/add-windows-path-environment-variable/
+
+Close the window.
+
 
 ## 1. Phidget setup (OPTIONAL)
 
@@ -26,7 +54,7 @@ If you have a Phidget temperature sensor, install the Phidget driver for your ma
 
 ## 2. Install this Server with:
 
-Open a terminal or the Terminal app (osx) and type this command:
+Open a terminal (for example the Anaconda Prompt) or the Terminal app (osx) and type this command:
 
 `pip install SR700_Artisan_Server`
 
