@@ -39,7 +39,7 @@ Open a terminal or the Terminal app (osx) and type this command:
 
 To update from an old version type:
 
-`pip install SR700_Artisan_Server==1.6`
+`pip install SR700_Artisan_Server==1.7`
 
 ### Windows:
 
