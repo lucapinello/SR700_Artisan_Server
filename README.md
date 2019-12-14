@@ -22,7 +22,7 @@ Open the Anaconda Prompt (not the powershell or window cmd!), a terminal will sh
 
 In the terminal window type:
 
-`conda create -n artisan -python=3.5 -y`
+`conda create -n artisan python=3.5 -y`
 
 
 ## 1. Phidget setup (OPTIONAL)
