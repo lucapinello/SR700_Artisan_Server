@@ -31,6 +31,10 @@ If you have a Phidget temperature sensor, install the Phidget driver for your ma
 
 ## 2. Install this Server with:
 
+First make sure you are using the correct env with:
+
+`conda activate artisan`
+
 ### OSX or Linux:
 
 Open a terminal or the Terminal app (osx) and type this command:
@@ -48,6 +52,10 @@ On a Window machine the procedure is slightly different.
 Open the Anaconda Prompt and activate the environment you have created before with:
 
 `activate artisan`
+
+Then install the Server with:
+
+`pip install SR700_Artisan_Server`
 
 Check where you have the scripts with:
 
