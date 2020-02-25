@@ -34,7 +34,7 @@ class Roaster(object):
                 max_31865_gpio_miso=9,
                 max_31865_gpio_mosi=10,
                 max_31865_gpio_clk=11,
-                kp=0.4, ki=0.0075, kd=0.9):
+                kp=0.4, ki=0.0075, kd=0.9, use_internal_pid=True):
 
         """Creates a freshroastsr700 object passing in methods included in this
         class."""
@@ -55,7 +55,8 @@ class Roaster(object):
                 max_31865_gpio_clk=max_31865_gpio_clk,
                 update_data_func=self.update_data,
                 state_transition_func=self.next_state,
-                thermostat=True,
+                thermostat=True if use_internal_pid else False,
+                ext_sw_heater_drive= True if not use_internal_pid else False,
                 kp=kp,
                 ki=ki,
                 kd=kd)
@@ -137,6 +138,9 @@ class Roaster(object):
         else:
             self.roaster.target_temp = new_temperature
 
+    def set_heat_level(self,value):
+        self.roster.heater_level=int(value)
+
     def set_time(self, time):
         new_time = int(time)
         self.roaster.time_remaining = new_time
@@ -207,6 +211,9 @@ def main():
         parser.add_argument('--enable_extension', type=str, help='Running mode: phidget_simple,\
         phidget_hub,max31865 if not specified no external sensor will be used,',
         default='simple',choices=['phidget_simple','phidget_hub', 'max31865'] )
+        parser.add_argument('--pid_mode', type=str, help='PID mode: internal,\
+        artisan, if not specified the internal PID is used,',
+        default='internal',choices=['internal','artisan'] )
         parser.add_argument('--phidget_hub_port',  type=int,  default=0)
         parser.add_argument('--phidget_hub_channel',  type=int,  default=0)
         parser.add_argument('--kp',  type=float, default=None)
@@ -233,7 +240,9 @@ def main():
             kp=assign_pid_param(args.kp,0.4)
             ki=assign_pid_param(args.ki,0.0075)
             kd=assign_pid_param(args.kd,0.9)
+
         elif args.enable_extension=='max31865':
+
             use_max31865=True
 
             kp=assign_pid_param(args.kp,0.4)
@@ -252,7 +261,10 @@ def main():
         else:
             phidget_use_hub=False
 
-
+        if args.pid_mode=='internal':
+            use_internal_pid=True
+        else:
+            use_internal_pid=False
         nameserver_process=None
         r=None
 
@@ -294,7 +306,7 @@ def main():
                     max_31865_gpio_miso=args.max_31865_gpio_miso,
                     max_31865_gpio_mosi=args.max_31865_gpio_mosi,
                     max_31865_gpio_clk=args.max_31865_gpio_clk,
-                    kp=kp,ki=ki,kd=kd)
+                    kp=kp,ki=ki,kd=kd, use_internal_pid=)
 
         r.roaster.log_info=False
 
