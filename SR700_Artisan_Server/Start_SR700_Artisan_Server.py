@@ -139,7 +139,7 @@ class Roaster(object):
             self.roaster.target_temp = new_temperature
 
     def set_heat_level(self,value):
-        self.roster.heater_level=int(value)
+        self.roaster.heater_level=int(value)
 
     def set_time(self, time):
         new_time = int(time)
