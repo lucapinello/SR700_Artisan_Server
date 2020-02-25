@@ -306,7 +306,7 @@ def main():
                     max_31865_gpio_miso=args.max_31865_gpio_miso,
                     max_31865_gpio_mosi=args.max_31865_gpio_mosi,
                     max_31865_gpio_clk=args.max_31865_gpio_clk,
-                    kp=kp,ki=ki,kd=kd, use_internal_pid=)
+                    kp=kp,ki=ki,kd=kd, use_internal_pid=use_internal_pid)
 
         r.roaster.log_info=False
 
