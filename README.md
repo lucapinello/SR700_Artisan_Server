@@ -136,9 +136,13 @@ See documentation for `freshroastsr700_phidget` for more info.
 
 ## 5. In Artisan go under Help and select Load Settings…
 
-Download and use this file: https://raw.githubusercontent.com/lucapinello/SR700_Artisan_Server/master/SR700_Artisan_Server/settings/artisan-settings.aset
+If you want to use the internal PID download and use this file: https://raw.githubusercontent.com/lucapinello/SR700_Artisan_Server/master/SR700_Artisan_Server/settings/artisan-settings.aset
 
 The roasting profiles are created through alarms, a generic profile is already loaded.
+
+NEW! If you want to use the Artisan PID and its excellent designer, use instead this file:
+https://github.com/lucapinello/SR700_Artisan_Server/blob/master/SR700_Artisan_Server/settings/artisan-settings_sr700.aset
+
 
 Now you are ready to roast!
 
