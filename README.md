@@ -164,7 +164,7 @@ In this case the roasting profiles are created through alarms and a generic prof
 
 
 ### NEW! If you want to use the Artisan PID and its excellent designer, use instead this file:
-https://github.com/lucapinello/SR700_Artisan_Server/blob/master/SR700_Artisan_Server/settings/artisan-settings_sr700.aset
+https://raw.githubusercontent.com/lucapinello/SR700_Artisan_Server/master/SR700_Artisan_Server/settings/artisan-settings_sr700.aset
 
 Here you can read how to use the artisan designer:
 
