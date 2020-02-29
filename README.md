@@ -24,7 +24,6 @@ In the terminal window type:
 
 `conda create -n artisan python=3.5 -y`
 
-
 ## 1. Phidget setup (OPTIONAL)
 
 If you have a Phidget temperature sensor, install the Phidget driver for your machine: https://www.phidgets.com/docs/Operating_System_Support
@@ -133,7 +132,22 @@ NEW! you can also enable the Artisan PID mode adding the flag:
  --pid_mode artisan
 ```
 
-This can be combined with all the options above. To use this new function you need to download and load the new setting file available below.
+
+This can be combined with all the options above. For example to use the internal temperature prove the command is:
+
+```
+Start_SR700_Artisan_Server --pid_mode artisan
+```
+
+To use the phidget with 1 channell instead:
+
+```
+ Start_SR700_Artisan_Server --enable_extension phidget_simple --pid_mode artisan
+```
+
+## NOTE To use this new function you need to download and load the new setting file available below.
+
+
 See documentation for `freshroastsr700_phidget` for more info.
 
 ## 4. Start Artisan
@@ -146,16 +160,18 @@ See documentation for `freshroastsr700_phidget` for more info.
 
 If you want to use the internal PID download and use this file: https://raw.githubusercontent.com/lucapinello/SR700_Artisan_Server/master/SR700_Artisan_Server/settings/artisan-settings.aset
 
-The roasting profiles are created through alarms, a generic profile is already loaded.
+In this case the roasting profiles are created through alarms and a generic profile is already loaded. To create custom profiiles you need to use this software: https://github.com/lucapinello/SR700_Artisan_Profile_Builder
 
-NEW! If you want to use the Artisan PID and its excellent designer, use instead this file:
+
+### NEW! If you want to use the Artisan PID and its excellent designer, use instead this file:
 https://github.com/lucapinello/SR700_Artisan_Server/blob/master/SR700_Artisan_Server/settings/artisan-settings_sr700.aset
 
+Here you can read how to use the artisan designer:
+
+https://artisan-scope.org/docs/designer/
+
+The fan control is not supported in the Artisan designer so you need to add alarms yuorself
 
 Now you are ready to roast!
 
 Hit Start, and keep in mind that the first 30sec are for preheating the machine.
-
-## NOTE: You can create custom profiles with this other tool I wrote: https://github.com/lucapinello/SR700_Artisan_Profile_Builder
-
-You can also disable the automatic changes in temperature and fan using the buttons: Temp Manual and Fan Manual. The buttons Temp Alarm and Fan Alarm enable instead the alarm mode.
