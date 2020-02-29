@@ -126,7 +126,7 @@ If you need to, you can also specify the GPIO pins used by the MAX31865, e.g.
 `Start_SR700_Artisan_Server --enable_extension max31865 --max_31865_gpio_cs=8 --max_31865_gpio_miso=9 --max_31865_gpio_mosi=10 --max_31865_gpio_clk=11`
 
 
-NEW! you can also enable the Artisan PID mode adding the flag:
+#### NEW! you can also enable the Artisan PID mode adding the flag:
 
 ```
  --pid_mode artisan
@@ -145,7 +145,7 @@ To use the phidget with 1 channell instead:
  Start_SR700_Artisan_Server --enable_extension phidget_simple --pid_mode artisan
 ```
 
-## NOTE To use this new function you need to download and load the new setting file available below.
+** NOTE**  To use this new function you need to download and load the new setting file available below.
 
 
 See documentation for `freshroastsr700_phidget` for more info.
