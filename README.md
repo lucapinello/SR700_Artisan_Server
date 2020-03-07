@@ -152,7 +152,13 @@ See documentation for `freshroastsr700_phidget` for more info.
 
 ## 4. Start Artisan
 
-**Important** if you are on a Mac start Artisan **from the Terminal app** with this command:
+**Important** if you are on a Mac start Artisan **from the Terminal app** with these commands:
+
+First make sure you are using the correct env with:
+
+`conda activate artisan`
+
+Then run:
 
 `/Applications/Artisan.app/Contents/MacOS/Artisan`
 
