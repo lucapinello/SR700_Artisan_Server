@@ -214,6 +214,9 @@ def main():
         parser.add_argument('--pid_mode', type=str, help='PID mode: internal,\
         artisan, if not specified the internal PID is used,',
         default='internal',choices=['internal','artisan'] )
+        parser.add_argument('--network_mode', type=str, help='Network mode: private,\
+        public, if not specified runs as "private" (external computers cannot interact with roaster),',
+        default='private',choices=['private','public'] )
         parser.add_argument('--phidget_hub_port',  type=int,  default=0)
         parser.add_argument('--phidget_hub_channel',  type=int,  default=0)
         parser.add_argument('--kp',  type=float, default=None)
@@ -285,13 +288,20 @@ def main():
 
         logging.info('Starting Nameserver...')
         with open(os.devnull, 'w') as fp:
-            nameserver_process=sb.Popen(['python', '-m','Pyro4.naming'],stdout=fp)
+            launch_options = ['python3', '-m','Pyro4.naming']
+            if args.network_mode == "public":
+                launch_options.append('--host=0.0.0.0')
+            nameserver_process=sb.Popen(launch_options,stdout=fp)
 
         ##Pyro4.naming.startNS()
         time.sleep(1)
 
         logging.info('Starting Server...')
-        daemon = Pyro4.Daemon()                # make a Pyro daemon
+        if args.network_type == "private":
+            daemon = Pyro4.Daemon()                # make a Pyro daemon
+        elif args.network_type == "public":
+            daemon = Pyro4.Daemon('127.0.0.1',True)                # make a Pyro daemon and bind to external IP
+
         ns = Pyro4.locateNS()
 
 
