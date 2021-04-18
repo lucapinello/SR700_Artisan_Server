@@ -181,3 +181,8 @@ The fan control is not supported in the Artisan designer so you need to add alar
 Now you are ready to roast!
 
 Hit Start, and keep in mind that the first 30sec are for preheating the machine.
+
+
+# Remote Execution
+
+It is now possible to run the Server on a different machine than Artisan itself; see REMOTE_EXECUTION.md for more details.
